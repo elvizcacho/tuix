@@ -1,20 +1,3 @@
-.body-container .input-name label {
-    color: red;
+.in-line {
+    display: block;
 }
-
-.body-container .form-container label {
-    color: blue;
-}
-
-.body-container .input-name span {
-    color: white;
-}
-
-.body-container .input-name {
-    background-color: black;
-}
-
-
-
-
-
