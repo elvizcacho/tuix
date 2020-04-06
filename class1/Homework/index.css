@@ -1,0 +1,12 @@
+.form-container column-1 {
+    display: inline;
+}
+
+.form-container column-2 {
+    display: inline;
+}
+
+.form-container .column-1 span,input {
+    display: block;
+}
+
