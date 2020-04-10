@@ -1,0 +1,32 @@
+.form-container {
+   background-color: whitesmoke;
+   padding: 5px;
+}
+
+.form-container div {
+   display: inline-block;
+}
+
+.form-container .column-1,.column-3 {
+   width: 200px;
+   height: 100px;
+   padding: 10px;
+}
+
+.form-container .column-2,.column-4 {
+   width: 350px;
+   height: 100px;
+   padding: 10px;
+}
+
+input {
+   width: 340px;
+}
+
+.form-container .column-2 .input2,.input3 {
+   width: 165px;
+}
+
+.form-container .column-4 .input1,.input2 {
+   width: 165px;
+}
