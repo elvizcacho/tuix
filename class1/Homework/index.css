@@ -5,6 +5,7 @@
 
 .form-container div {
    display: inline-block;
+   height: 120px;
 }
 
 .form-container .column-1,.column-3 {
@@ -19,15 +20,11 @@
    padding: 10px;
 }
 
-.form-container .column-5 {
-   width: 100px;
-}
-
 input {
    width: 340px;
 }
 
-.form-container .column-2 .input2,.input3 {
+.form-container .column-2 .input2 {
    width: 165px;
 }
 
@@ -35,6 +32,15 @@ input {
    width: 165px;
 }
 
+.form-container .column-4 .input3 {
+   width: 340px;
+}
+
 .form-container .botom {
    width: 50px;
+   background-color: coral;
+   border: none;
+   color: white;
+   font-size: x-small;
+   display: block;
 }
