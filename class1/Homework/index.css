@@ -8,7 +8,7 @@
 }
 
 .form-container .column-1,.column-3 {
-   width: 200px;
+   width: 220px;
    height: 100px;
    padding: 10px;
 }
@@ -17,6 +17,10 @@
    width: 350px;
    height: 100px;
    padding: 10px;
+}
+
+.form-container .column-5 {
+   width: 100px;
 }
 
 input {
@@ -29,4 +33,8 @@ input {
 
 .form-container .column-4 .input1,.input2 {
    width: 165px;
+}
+
+.form-container .botom {
+   width: 50px;
 }
