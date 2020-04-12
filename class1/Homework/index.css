@@ -6,17 +6,22 @@
 .form-container div {
    display: inline-block;
    height: 120px;
+   font-size: ;
+}
+
+.form-container .bottom {
+   display: block;
+   padding: 20px;
+   height: 30px;
 }
 
 .form-container .column-1,.column-3 {
-   width: 220px;
-   height: 100px;
+   width: 200px;
    padding: 10px;
 }
 
 .form-container .column-2,.column-4 {
-   width: 350px;
-   height: 100px;
+   width: 400px;
    padding: 10px;
 }
 
@@ -24,7 +29,7 @@ input {
    width: 340px;
 }
 
-.form-container .column-2 .input2 {
+.form-container .column-2 .input2,.input3 {
    width: 165px;
 }
 
@@ -36,8 +41,9 @@ input {
    width: 340px;
 }
 
-.form-container .botom {
-   width: 50px;
+.form-container .bottom .buton {
+   width: 70px;
+   height: 30px;
    background-color: coral;
    border: none;
    color: white;
