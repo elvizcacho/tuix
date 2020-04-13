@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+
+.header {
+    width: 100%;
+}
+
+.header .head {
+    max-width: 1360px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.header .head div {
+    display: inline-block;
+}
+
+.header .head div[class*=hd-] {
+    padding: 10px;
+}
+
+.header .head .hd-social-networks div {
+    width: 35px;
+    margin: auto;
+    padding: 2px;
+    text-align: center;
+}
+
+.header .head .float-left {
+    float: left;
+}
+
+
+.header .menu-content {
+    width: 100%;
+    background-color: black;
+}
+
+.header .menu-content .menu {
+    max-width: 1360px;
+    margin: 0 auto;
+    justify-content: space-around;
+    display: flex;
+}
+
+.header .menu-content .menu div {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+}
