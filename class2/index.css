@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container div[class*="-green-"] {
+    background-color: green;
+}
+
+.form-container div[class*="-blue-"] {
+    background-color: blue;
+}
+
+.form-container div[class*="-red-"] {
+    background-color: red;
+}
+
+.form-container div[class*="-orange-"] {
+    background-color: orange;
+}
+
+.form-container div[class^="col-"] {
+    padding: 20px;
+}
+
+.form-container div[class*="-1"] {
+    width: 25%;
+}
+
+.form-container div[class*="-2"] {
+    width: 50%;
+}
+
+.form-container div[class*="-3"] {
+    width: 75%;
+}
+
+.form-container div[class*="-4"] {
+    width: 100%;
+}
+
+
+.form-container .others {
+    padding: 20px;
+}
+
+.form-container .col-green-1 {
+    position: relative;
+}
+
+.form-container .col-green-1 .close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.form-container .float-right {
+    float: right;
+}
+
+.form-container .float-left {
+    float: left;
+}
+
+.form-container .clear {
+    clear: both;
+}
+
+.form-container .col-orange-2 .centered-content-container {
+    text-align: center;
+}
