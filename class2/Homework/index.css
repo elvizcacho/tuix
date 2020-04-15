@@ -53,3 +53,13 @@
     color: white;
     padding: 10px;
 }
+
+
+/*BODY*/
+
+.body-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20 0 20 0px;
+    border-color: black;
+}
