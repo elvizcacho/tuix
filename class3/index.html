@@ -1,0 +1,70 @@
+<html>
+    <header>
+        <title>Tables</title>
+        <link rel="stylesheet" href="index.css">
+    </header>
+    <body>
+        <table class="main-table">
+            <thead>
+                <tr>
+                    <th>Vegetables</th>
+                    <th>Meats</th>
+                    <th>Candies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row1">
+                    <td>Coriander</td>
+                    <td>Beef</td>
+                    <td>Chocolate</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Carrot</td>
+                    <td>Chicken</td>
+                    <td class="no-padding">
+                        <table class="internal-table">
+                            <tbody>
+                                <tr>
+                                    <td>Biscuits</td>
+                                    <td>Cookies</td>
+                                    <td>Lolly-pop</td>
+                                    <td>Nerds</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Fish</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="main-table">
+            <thead>
+            <tr>
+                <th>Vegetables</th>
+                <th>Meats</th>
+                <th colspan="4">Candies</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="row1">
+                <td>Coriander</td>
+                <td>Beef</td>
+                <td colspan="4">Chocolate</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Carrot</td>
+                <td>Chicken</td>
+                <td>Biscuits</td>
+                <td>Cookies</td>
+                <td>Lolly-pop</td>
+                <td>Nerds</td>
+            </tr>
+            <tr>
+                <td colspan="5">Fish</td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
