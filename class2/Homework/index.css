@@ -17,8 +17,8 @@ div [class*=grey] {
     background-color: darkgrey;
 }
 
-div [class*=green] {
-    background-color: lawngreen;
+div [class*=blue] {
+    background-color: cornflowerblue;
 }
 
 
@@ -129,6 +129,18 @@ div [class*=inline-block] {
     padding: 10px;
 }
 
+/*Advertising*/
+
+.ad {
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 600px;
+}
+
 
 /*BODY*/
 
@@ -176,16 +188,29 @@ div [class*=inline-block] {
     padding: 0px 15px;
 }
 
-.body-content .content-B .green-1 {
-    height: 270px;
+.body-content .content-B .notice1 {
+    height: 540px;
+}
+
+.body-content .content-B .blue {
     color: white;
     font-size: xx-large;
     text-align: left;
     vertical-align: middle;
+    padding: 5px;
+    height: 270px;
 }
 
-.body-content .content-B .green-1 .span {
-    font-size: xx-small;
+.body-content .content-B .category span {
+    font-size: small;
+}
+
+.body-content .content-B .notice2,.notice3 {
+    height: 270px;
+}
+
+.body-content .content-B .notice4,.notice5 {
+    height: 270px;
 }
 
 .body-content .content-B .notice3,.notice4,.notice5 {
