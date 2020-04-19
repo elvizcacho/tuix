@@ -4,6 +4,68 @@
     box-sizing: border-box;
 }
 
+
+div [class*=yellow] {
+    background-color: gold;
+}
+
+div [class*=red] {
+    background-color: red;
+}
+
+div [class*=grey] {
+    background-color: darkgrey;
+}
+
+div [class*=green] {
+    background-color: lawngreen;
+}
+
+
+div [class*=border-bottom] {
+    border-bottom: cornflowerblue;
+}
+
+
+div [class*=float-left] {
+    float: left;
+}
+
+div [class*=float-right] {
+    float: right;
+}
+
+div [class*=clear] {
+    clear: both;
+}
+
+
+div [class*=block] {
+    display: block;
+}
+
+div [class*=inline] {
+    display: inline;
+}
+
+div [class*=inline-block] {
+    display: inline-block;
+}
+
+
+.body-content div[class*="-1"] {
+    width: 33%;
+}
+
+.body-content div[class*="-2"] {
+    width: 66%;
+}
+
+.body-content div[class*="-3"] {
+    width: 100%;
+}
+
+
 /*HEADER*/
 
 .header {
@@ -24,21 +86,34 @@
     padding: 10px;
 }
 
-.header .head .hd-social-networks div {
-    width: 35px;
-    margin: auto;
-    padding: 2px;
-    text-align: center;
+.header .head .hd-brand .logo {
+    width: auto;
+    max-height: 55px;
 }
 
-.header .head .float-left {
-    float: left;
+.header .head .hd-subscribe,.hd-log-in {
+    margin: 0px 5px;
+}
+
+.header .head .hd-social-networks div {
+    width: 34px;
+    height: 34px;
+    margin: 0px 5px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header .head .hd-log-in {
+    color: white;
+    background-color: black;
 }
 
 
 .header .menu-content {
     width: 100%;
     background-color: black;
+    z-index: 0;
 }
 
 .header .menu-content .menu {
@@ -60,6 +135,69 @@
 .body-content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20 0 20 0px;
-    border-color: black;
+    padding: 20px 0 20px 0px;
+}
+
+.body-content .en-vivo {
+    height: 52px;
+    padding: 5px 10px;
+    margin: 0px;
+    position: relative;
+}
+
+.body-content .en-vivo span {
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.body-content .coronavirus {
+    margin: 20px 0px;
+}
+
+.body-content .content-A div {
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.body-content .content-A .second-main-news {
+    vertical-align: top;
+    position: relative;
+}
+
+.body-content .content-A .second-main-news .pic,.title {
+    width: 50%;
+    padding: 0px 3px;
+}
+
+.body-content .content-B div[class*=sub-B] {
+    float: left;
+    padding: 0px 15px;
+}
+
+.body-content .content-B .green-1 {
+    height: 270px;
+    color: white;
+    font-size: xx-large;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.body-content .content-B .green-1 .span {
+    font-size: xx-small;
+}
+
+.body-content .content-B .notice3,.notice4,.notice5 {
+    margin: 0px 0px 20px;
+}
+
+.body-content .content-B .sub-B div img {
+    height: 150px;
+    overflow: hidden;
+}
+
+.body-content .content-B .sub-B .pic img {
+    height: 415px;
+    overflow: hidden;
 }
