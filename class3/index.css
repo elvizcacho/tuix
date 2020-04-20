@@ -47,6 +47,7 @@ table {
     border: 1px solid black;
     height: 100px;
 }
+/* Option 1 is the recommended one as it works in old browsers */
 /* option 1 simulates that the content is inside of a table cell*/
 .option1 .element-container {
     border: 1px solid black;
