@@ -28,15 +28,15 @@
     width: 25%;
 }
 
-.form-container div[class*="-2"] {
-    width: 50%;
+.form-container div[class*="grid-2"] {
+     width: 50%;
 }
 
 .form-container div[class*="-3"] {
     width: 75%;
 }
 
-.form-container div[class*="-4"] {
+.col-4 {
     width: 100%;
 }
 

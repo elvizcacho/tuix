@@ -40,3 +40,15 @@ table {
     border-right: 0;
     border-left: 1px solid black;
 }
+
+.element-container {
+    width: 100%;
+    border: 1px solid black;
+    height: 100px;
+    display: table;
+}
+
+.element-container .element {
+    vertical-align: middle;
+    display: table-cell;
+}
