@@ -41,14 +41,35 @@ table {
     border-left: 1px solid black;
 }
 
+
 .element-container {
     width: 100%;
+    border: 1px solid black;
+    height: 100px;
+}
+/* option 1 simulates that the content is inside of a table cell*/
+.option1 .element-container {
     border: 1px solid black;
     height: 100px;
     display: table;
 }
 
-.element-container .element {
+.option1 .element-container .element {
     vertical-align: middle;
     display: table-cell;
+}
+
+/* option 2 uses position absolute and transform
+    position absolute and top 50% move the content to the middle
+    but it doesn't take into account the height of the content.
+    That's fixed when the transform: translateY(-50%) is applied.
+*/
+.option2 .element-container {
+    position: relative;
+}
+
+.option2 .element-container .element {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%
 }
