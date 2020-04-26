@@ -5,63 +5,59 @@
 }
 
 
-div [class*=yellow] {
+.yellow {
     background-color: gold;
 }
 
-div [class*=red] {
+.red {
     background-color: red;
 }
 
-div [class*=grey] {
+.grey {
     background-color: darkgrey;
 }
 
-div [class*=blue] {
-    background-color: cornflowerblue;
+.blue {
+    background-color: rgb(0, 155, 192);
 }
 
 
-div [class*=border-bottom] {
+.border-bottom {
     border-bottom: cornflowerblue;
 }
 
 
-div [class*=float-left] {
+.float-left {
     float: left;
 }
 
-div [class*=float-right] {
+.float-right {
     float: right;
 }
 
-div [class*=clear] {
+.clear {
     clear: both;
 }
 
 
-div [class*=block] {
+.block {
     display: block;
 }
 
-div [class*=inline] {
-    display: inline;
-}
-
-div [class*=inline-block] {
+.inline-block {
     display: inline-block;
 }
 
 
-.body-content div[class*="-1"] {
+.grid-1 {
     width: 33%;
 }
 
-.body-content div[class*="-2"] {
+.grid-2 {
     width: 66%;
 }
 
-.body-content div[class*="-3"] {
+.grid-3 {
     width: 100%;
 }
 
@@ -72,58 +68,84 @@ div [class*=inline-block] {
     width: 100%;
 }
 
-.header .head {
+.header .head-container {
     max-width: 1360px;
+    width: 100%;
+    height: 75px;
     margin: 0 auto;
-    text-align: right;
 }
 
-.header .head div {
+.header .head-container div {
     display: inline-block;
 }
 
-.header .head div[class*=hd-] {
+.header .head-container div[class*=hd-] {
     padding: 10px;
-}
-
-.header .head .hd-brand .logo {
-    width: auto;
-    max-height: 55px;
-}
-
-.header .head .hd-subscribe,.hd-log-in {
-    margin: 0px 5px;
-}
-
-.header .head .hd-social-networks div {
-    width: 34px;
-    height: 34px;
-    margin: 0px 5px;
-    padding: 2px;
-    text-align: center;
+    display: table-cell;
+    height: 100%;
     vertical-align: middle;
 }
 
-.header .head .hd-log-in {
+.header .head-container .container-left {
+    float: left;
+    display: inline-table;
+    height: 100%;
+}
+
+.header .head-container .container-left .hd-brand .logo {
+    width: auto;
+    max-height: 55px;
+    height: 100%;
+}
+
+.header .head-container .container-right {
+    float: right;
+    display: inline-table;
+    height: 100%;
+    padding: 5px;
+}
+
+.header .head-container .container-right .hd- div {
+    margin: 0px 5px;
+}
+
+.header .head-container .container-right .hd- .hd-log-in {
     color: white;
     background-color: black;
 }
 
+.header .head-container .container-right .hd-social-networks div {
+    width: 34px;
+    height: 34px;
+    margin: 0px 5px;
+    padding: 9px;
+    text-align: center;
+}
 
-.header .menu-content {
+
+.header .menu-container {
     width: 100%;
     background-color: black;
-    z-index: 0;
 }
 
-.header .menu-content .menu {
+.header .menu-container .container-buttons {
     max-width: 1360px;
+    width: 100%;
     margin: 0 auto;
-    justify-content: space-around;
-    display: flex;
+    height: 38px;
 }
 
-.header .menu-content .menu div {
+.header .menu-container .container-buttons .buttons {
+    text-align: justify;
+}
+
+.header .menu-container .container-buttons .buttons:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+}
+
+.header .menu-container .container-buttons .buttons li {
     display: inline-block;
     color: white;
     padding: 10px;
@@ -144,85 +166,339 @@ div [class*=inline-block] {
 
 /*BODY*/
 
-.body-content {
+.body-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0 20px 0px;
 }
 
-.body-content .en-vivo {
+
+
+.body-container .en-vivo-container {
+    display: table;
     height: 52px;
+    width: 100%;
+}
+
+.body-container .en-vivo-container .en-vivo {
+    height: 100%;
     padding: 5px 10px;
     margin: 0px;
     position: relative;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.body-content .en-vivo span {
+.body-container .en-vivo-container .en-vivo .title {
+    font-size: x-large;
+}
+
+.body-container .en-vivo-container .en-vivo .plus {
     color: white;
     position: absolute;
     right: 10px;
     top: 0px;
+    font-size: 25px;
 }
 
-.body-content .coronavirus {
+
+
+.body-container .coronavirus {
     margin: 20px 0px;
 }
 
-.body-content .content-A div {
+
+
+.body-container .containerA {
+    margin: 0 0 15px 0;
+}
+
+.body-container .containerA div {
     display: inline-block;
     padding: 0px 15px;
 }
 
-.body-content .content-A .second-main-news {
+
+.body-container .containerA .main-news {
+    position: relative;
+}
+
+.body-container .containerA .main-news .text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.body-container .containerA .main-news .text-container .text {
+    background-color: black;
+    opacity: 80%;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+.body-container .containerA .main-news .text-container .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+}
+
+.body-container .containerA .main-news .text-container .text .title {
+    font-size: xx-large;
+    padding: 0;
+}
+
+.body-container .containerA .main-news .img-container {
+    padding: 0;
+}
+
+
+.body-container .containerA .second-main-news {
     vertical-align: top;
     position: relative;
 }
 
-.body-content .content-A .second-main-news .pic,.title {
+.body-container .containerA .second-main-news > div {
+    border-bottom: solid .5px red;
+    padding: 0;
+}
+
+.body-container .containerA .second-main-news .img-container,
+.body-container .containerA .second-main-news .text {
     width: 50%;
     padding: 0px 3px;
 }
 
-.body-content .content-B div[class*=sub-B] {
+.body-container .containerA .second-main-news .text .title {
+    padding: 0px 15px 15px;
+}
+
+.body-container .containerA .second-main-news .text .category {
+    width: 100%;
+    padding: 0px 15px;
+    font-size: small;
+}
+
+
+
+.body-container .containerB div.sub-B {
     float: left;
     padding: 0px 15px;
 }
 
-.body-content .content-B .notice1 {
-    height: 540px;
+
+.body-container .containerB .news-container {
+    position: relative;
 }
 
-.body-content .content-B .blue {
-    color: white;
-    font-size: xx-large;
-    text-align: left;
-    vertical-align: middle;
-    padding: 5px;
-    height: 270px;
+.body-container .containerB .news-container .img-container {
+    width: 100%;
+    overflow: hidden;
 }
 
-.body-content .content-B .category span {
-    font-size: small;
-}
-
-.body-content .content-B .notice2,.notice3 {
-    height: 270px;
-}
-
-.body-content .content-B .notice4,.notice5 {
-    height: 270px;
-}
-
-.body-content .content-B .notice3,.notice4,.notice5 {
+.body-container .containerB .news-container div[class^=news] {
     margin: 0px 0px 20px;
 }
 
-.body-content .content-B .sub-B div img {
-    height: 150px;
+.body-container .containerB .news-container .news1,
+.body-container .containerB .news-container .news4,
+.body-container .containerB .news-container .news5 {
+    border-bottom: solid 0.5px rgb(0, 155, 192);
+}
+
+
+.body-container .containerB .news-container .news1 {
+    height: 560px;
+}
+
+.body-container .containerB .news-container .news1 .text .title {
+    width: 100%;
+    font-size: large;
+    padding: 0;
+}
+
+.body-container .containerB .news-container .news1 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+}
+
+
+.body-container .containerB .news-container .news2 {
+    color: white;
+    padding: 15px;
+    height: 270px;
+    display: inline-table;
+}
+
+.body-container .containerB .news-container .news2 .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.body-container .containerB .news-container .news2 .text .title {
+    width: 100%;
+    font-size: xx-large;
+    text-align: left;
+    padding: 0;
+}
+
+.body-container .containerB .news-container .news2 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+    margin-top: 10px;
+}
+
+
+.body-container .containerB .news-container .opinion {
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+
+.body-container .containerB .news-container .news3 {
+    color: white;
+    padding: 15px;
+    height: 270px;
+    display: inline-table;
+    background-color: black;
+}
+
+.body-container .containerB .news-container .news3 .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.body-container .containerB .news-container .news3 .text .title {
+    width: 100%;
+    font-size: xx-large;
+    text-align: left;
+    padding: 0;
+}
+
+.body-container .containerB .news-container .news3 .text .preview {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.body-container .containerB .news-container .news3 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+    margin-top: 10px;
+}
+
+
+
+.body-container .containerB .news-container .news4 {
+    height: 270px;
+}
+
+.body-container .containerB .news-container .news4 .text .title {
+    width: 100%;
+    font-size: large;
+    padding: 0;
+}
+
+.body-container .containerB .news-container .news4 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+}
+
+
+
+.body-container .containerB .news-container .news5 {
+    height: 270px;
+}
+
+.body-container .containerB .news-container .news5 .text .title {
+    width: 100%;
+    font-size: large;
+    padding: 0;
+}
+
+.body-container .containerB .news-container .news5 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+}
+
+
+
+.body-container .containerC div.sub-C {
+    float: left;
+    padding: 0px 15px;
+}
+
+.body-container .containerC .news-container .img-container {
+    width: 100%;
     overflow: hidden;
 }
 
-.body-content .content-B .sub-B .pic img {
-    height: 415px;
-    overflow: hidden;
+.body-container .containerC .news-container div[class^=news] {
+    margin: 0px 0px 20px;
+}
+
+.body-container .containerC .news-container .news1,
+.body-container .containerC .news-container .news2,
+.body-container .containerC .news-container .news3 {
+    border-bottom: solid 0.5px rgb(0, 155, 192);
+}
+
+
+.body-container .containerC .news-container .news1 {
+    height: 270px;
+}
+
+.body-container .containerC .news-container .news1 .text .title {
+    width: 100%;
+    font-size: large;
+    padding: 0;
+}
+
+.body-container .containerC .news-container .news1 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+}
+
+
+.body-container .containerC .news-container .news2 {
+    height: 270px;
+}
+
+.body-container .containerC .news-container .news2 .text .title {
+    width: 100%;
+    font-size: large;
+    padding: 0;
+}
+
+.body-container .containerC .news-container .news2 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
+}
+
+
+.body-container .containerC .news-container .news3 {
+    height: 270px;
+}
+
+.body-container .containerC .news-container .news3 .text .title {
+    width: 100%;
+    font-size: large;
+    padding: 0;
+}
+
+.body-container .containerC .news-container .news3 .text .category {
+    width: 100%;
+    font-size: small;
+    padding: 0;
 }
