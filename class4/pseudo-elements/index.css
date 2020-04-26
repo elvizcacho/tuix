@@ -1,0 +1,97 @@
+:root {
+    --blue: #008fff;
+    --red: rgb(255, 63, 63);
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    padding: 20px;
+}
+
+.container .row {
+    margin: 20px 0;
+}
+
+.container .row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.element-container {
+    float: left;
+    margin: 0 20px;
+}
+
+.element {
+    display: table;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--blue);
+    cursor: grab;
+}
+
+/*.element:hover {
+    background-color: var(--red);
+    transition: 1.2s all ease-in-out;
+}*/
+
+.element .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.container-example-2 span:after {
+    content: " /";
+}
+.container-example-2 span:first-child:before {
+    content: " > ";
+}
+.container-example-2 span:last-child:after {
+    content: "";
+}
+
+.container-example-3 {
+    margin: 20px 0px;
+}
+
+.container-example-3 .talk-cloud {
+    width: 200px;
+    height: 100px;
+    background-color: var(--blue);
+    position: relative;
+}
+
+.container-example-3 .talk-cloud::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-left: 12px solid var(--blue);
+    position: absolute;
+    bottom: 0px;
+    right: -12px;
+}
+
+.container-example-4 .quotes::before {
+    content: '"';
+}
+
+.container-example-4 .quotes::after {
+    content: '"';
+}
+
+.container-example-5 p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+
+
