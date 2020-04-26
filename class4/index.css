@@ -1,0 +1,49 @@
+
+.container {
+    --azul: #00aeef;
+    --rojo: #F00;
+    --negro: #000;
+}
+
+
+.container .element-1 p,
+.container .element-2 p {
+    color: var(--rojo);
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.container .element-1-container {
+    /* color pallet */
+    --red: #8D0B00;
+    --blue: #0d0f8d;
+    --black: #000000;
+    --green: #008d10;
+
+    /* properties */
+    --bg: var(--azul);
+    --rotate: 45deg;
+}
+
+.container .element-2-container {
+    /* color pallet */
+    --red: #e3434c;
+    --blue: #587a8d;
+    --black: #000000;
+    --green: #668d00;
+
+    /* properties */
+    --bg: var(--red);
+    --rotate: 90deg;
+}
+
+.container .element {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    transform: rotate(var(--rotate));
+}
