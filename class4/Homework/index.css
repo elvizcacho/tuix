@@ -1,0 +1,191 @@
+:root {
+    --element-color: #ff3335;
+    --second-color: #490001;
+    --hover-color: #ff9000;
+}
+
+.container {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    border: 1px solid #dee0e2;
+    margin: 5px;
+    display: inline-table;
+}
+
+.container .element-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.container .element-container div {
+    margin: 0 auto;
+}
+
+
+/* triangle */
+
+.container .element-container .triangle {
+    width: 0;
+    height: 0;
+    border-left: 56px solid transparent;
+    border-right: 56px solid transparent;
+    border-bottom: 100px solid var(--element-color);
+}
+
+/* square */
+
+.container .element-container .square {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 50px solid var(--element-color);
+    border-right: 50px solid var(--second-color);
+    border-bottom: 50px solid var(--element-color);
+    border-left: 50px solid var(--second-color);
+}
+
+/* pentagon */
+
+.container .element-container .pentagon {
+    position: relative;
+    width: 64px;
+    height: 0px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 62px solid var(--element-color);
+}
+
+.container .element-container .pentagon:before {
+    content: "";
+    position: absolute;
+    top: -106px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-left: 57px solid transparent;
+    border-right: 57px solid transparent;
+    border-bottom: 44px solid var(--element-color);
+}
+
+/* hexagon */
+.container .element-container .hexagon:before,
+.container .element-container .hexagon:after {
+    content: '';
+    position: absolute;
+    top: -45px;
+    left: -26px;
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-top: 45px solid;
+    border-bottom: 45px solid;
+}
+
+.container .element-container .hexagon:before {
+    transform: rotate(60deg);
+    border-top: 45px solid var(--element-color);
+    border-bottom: 45px solid var(--second-color);
+}
+
+.container .element-container .hexagon {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-top: 45px solid var(--second-color);
+    border-bottom: 45px solid var(--element-color);
+}
+
+.container .element-container .hexagon:after {
+    transform: rotate(120deg);
+    border-top: 45px solid var(--second-color);
+    border-bottom: 45px solid var(--element-color);
+}
+
+.container .element-container .hexagon:hover {
+    border-top-color: var(--hover-color);
+}
+
+.container .element-container .hexagon:hover:before {
+    border-bottom-color: var(--hover-color);
+}
+
+.container .element-container .hexagon:hover:after {
+    border-top-color: var(--hover-color);
+}
+
+
+/* heptagon */
+
+.container .element-container .heptagon:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 80px;
+    background-color: var(--second-color);
+    transform: rotate(45deg);
+}
+
+.container .element-container .heptagon {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    background-color: var(--element-color);
+}
+
+.container .element-container .heptagon:after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 80px;
+    background-color: var(--element-color);
+    transform: rotate(-45deg);
+}
+
+
+/* yingyang */
+
+.yingyang {
+    width: 96px;
+    box-sizing: content-box;
+    height: 48px;
+    background: var(--second-color);
+    border-color: var(--element-color);
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.yingyang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: var(--second-color);
+    border: 18px solid var(--element-color);
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+
+.yingyang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--element-color);
+    border: 18px solid var(--second-color);
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
