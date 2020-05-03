@@ -153,13 +153,13 @@
 /* yingyang */
 
 .yingyang {
-    width: 96px;
+    width: 50px;
     box-sizing: content-box;
-    height: 48px;
+    height: 96px;
     background: var(--second-color);
     border-color: var(--element-color);
     border-style: solid;
-    border-width: 2px 2px 50px 2px;
+    border-width: 2px 50px 2px 2px;
     border-radius: 100%;
     position: relative;
 }
@@ -167,8 +167,8 @@
 .yingyang:before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 0%;
+    left: 50%;
     background: var(--second-color);
     border: 18px solid var(--element-color);
     border-radius: 100%;
