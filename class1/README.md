@@ -1,6 +1,6 @@
-#Class 1
+# Class 1
 
-####Topics: 
+#### Topics: 
 
 - 3 different ways to add css to HTML document.
 - Selectors (class, id, Tag) and specificity 

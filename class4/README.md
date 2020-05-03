@@ -1,6 +1,6 @@
-#Class 4
+# Class 4
 
-####Topics: 
+#### Topics: 
 
 - Questions from homework
 - Variables CSS

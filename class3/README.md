@@ -1,6 +1,6 @@
-#Class 3
+# Class 3
 
-####Topics: 
+#### Topics: 
 
 - Questions from homework
 - Tables

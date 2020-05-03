@@ -1,6 +1,6 @@
-#Class 2
+# Class 2
 
-####Topics: 
+#### Topics: 
 
 - Questions from homework
 - Selectors (attribute)
