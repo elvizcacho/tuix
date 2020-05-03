@@ -6,9 +6,9 @@
 - overflow
 - Calc function
 - Word-break
-- Clip-path
 
 Homework:
+ - 
 
 
 
