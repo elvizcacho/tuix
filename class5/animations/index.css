@@ -1,0 +1,62 @@
+
+:root {
+    --start-color: #2c4987;
+    --end-color: #ff0000;
+}
+
+@keyframes rebote {
+    0% {
+        transform: translateY(0px);
+        background-color: var(--start-color);
+        height: 50px
+    }
+    25% {
+        transform: translateY(100px) translateX(50px);
+        height: calc(50*0.5px);
+        background-color: var(--end-color);
+    }
+    50% {
+        transform: translateY(calc(100px * 0.25)) translateX(100px);
+        background-color: var(--start-color);
+        height: 50px
+    }
+    75% {
+        transform: translateY(calc(100px)) translateX(150px);
+        background-color: var(--end-color);
+        height: calc(50*0.75px) /* 37.5px */
+    }
+    100% {
+        transform: translateY(calc(100px * 0.5)) translateX(200px);
+        background-color: var(--start-color);
+        height: 50px
+    }
+}
+
+.container {
+    background-color: bisque;
+    height: 125px;
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    background: var(--start-color);
+    border-radius: 100%;
+    animation-duration: 12s;
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.ball-center {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid var(--start-color);
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
