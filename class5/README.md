@@ -2,11 +2,11 @@
 # Class 5
 
 #### Topics: 
-
+- animations
 - overflow
 - text-overflow
-- Calc function
-- Word-break
+- calc function
+- white-space and word-break
 
 Homework:
  - Do a scrollable table that shows only 5 rows. 
