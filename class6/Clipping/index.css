@@ -1,0 +1,33 @@
+
+.container {
+    position: relative;
+}
+
+.triangle-1 {
+    width: 200px;
+    height: 200px;
+    background-color: #00aeef;
+    clip-path: polygon(100px 0px, 100px 0px, 200px 200px, 0px 200px, 100px 0px);
+    position: absolute;
+    z-index: 1;
+}
+
+.triangle-1:hover {
+    transition: all 3s;
+    clip-path: polygon(0px 0px, 200px 0px, 200px 200px, 0px 200px, 0px 0px);
+}
+
+.triangle-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #0f0f15;
+    clip-path: polygon(100px 0px, 200px 200px, 0px 200px, 100px 0px);
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 2;
+}
+
+.square:hover {
+    transition: all 2s;
+}
