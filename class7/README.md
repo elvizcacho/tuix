@@ -2,7 +2,10 @@
 # Class 7
 
 #### Topics: 
-- flex
+- box-shadow
+- text-shadow
+
+### Homework
 
  
  
