@@ -1,0 +1,465 @@
+:root {
+    --element-color: #ff3335;
+    --second-color: #490001;
+    --hover-color: #ff9000;
+}
+
+.container {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    border: 1px solid #dee0e2;
+    margin: 5px;
+    display: inline-table;
+}
+
+.container .element-container {
+    width: 100px;
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px;
+    position: relative;
+}
+
+.container .element-container div {
+    margin: 0 auto;
+}
+
+
+/* triangle */
+
+.container .element-container div[class^=triangle] {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50px 71.12px, 0px 100px, 100px 100px, 50px 71.12px);
+    background-color: var(--element-color);
+}
+
+.container .element-container div[class^=triangle]:hover {
+    background-color: var(--hover-color);
+    transition: 1s;
+}
+
+.container .element-container .triangle-1:hover {
+    transform: scale(1.2);
+}
+
+.container .element-container .triangle-2 {
+    transform: rotate(120deg);
+    position: absolute;
+    top: 81.6px;
+    left: 68.3px;
+}
+
+.container .element-container .triangle-2:hover {
+    transform: scale(1.2) rotate(120deg);
+}
+
+.container .element-container .triangle-3 {
+    transform: rotate(240deg);
+    position: absolute;
+    top: 81.6px;
+    left: 31.6px;
+}
+
+.container .element-container .triangle-3:hover {
+    transform: scale(1.2) rotate(240deg);
+}
+
+/* square */
+
+.container .element-container div[class^=square] {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50px 50px, 0px 100px, 100px 100px, 50px 50px);
+    background-color: var(--element-color);
+}
+
+.container .element-container .square-2,
+.container .element-container .square-4 {
+    background-color: var(--second-color);
+}
+
+.container .element-container div[class^=square]:hover {
+    background-color: var(--hover-color);
+    transition: 1s;
+}
+
+.container .element-container .square-1:hover {
+    transform: scale(1.2);
+}
+
+.container .element-container .square-2 {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.container .element-container .square-2:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+.container .element-container .square-3 {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.container .element-container .square-3:hover {
+    transform: scale(1.2) rotate(180deg);
+}
+
+.container .element-container .square-4 {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.container .element-container .square-4:hover {
+    transform: scale(1.2) rotate(270deg);
+}
+
+
+/* pentagon */
+
+.container .element-container div[class^=pentagon] {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50px 57.47px, 19.1px 100px, 80.9px 100px, 50px 57.47px);
+    background-color: var(--element-color);
+}
+
+.container .element-container div[class^=pentagon]:hover {
+    background-color: var(--hover-color);
+    transition: 1s;
+}
+
+.container .element-container .pentagon-1:hover {
+    transform: scale(1.2);
+}
+
+.container .element-container .pentagon-2 {
+    transform: rotate(72deg);
+    position: absolute;
+    top: 55.1px;
+    left: 57.1px;
+}
+
+.container .element-container .pentagon-2:hover {
+    transform: scale(1.2) rotate(72deg);
+}
+
+.container .element-container .pentagon-3 {
+    transform: rotate(144deg);
+    position: absolute;
+    top: 63.5px;
+    left: 54.4px;
+}
+
+.container .element-container .pentagon-3:hover {
+    transform: scale(1.2) rotate(144deg);
+}
+
+.container .element-container .pentagon-4 {
+    transform: rotate(216deg);
+    position: absolute;
+    top: 63.5px;
+    left: 45.5px;
+}
+
+.container .element-container .pentagon-4:hover {
+    transform: scale(1.2) rotate(216deg);
+}
+
+.container .element-container .pentagon-5 {
+    transform: rotate(288deg);
+    position: absolute;
+    top: 55.2px;
+    left: 42.8px;
+}
+
+.container .element-container .pentagon-5:hover {
+    transform: scale(1.2) rotate(288deg);
+}
+
+/* hexagon */
+
+.container .element-container div[class^=hexagon] {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50px 56.7px, 25px 100px, 75px 100px, 50px 56.7px);
+    background-color: var(--element-color);
+}
+
+.container .element-container div[class^=hexagon]:hover {
+    background-color: var(--hover-color);
+    transition: 1s;
+}
+
+.container .element-container .hexagon-1:hover {
+    transform: scale(1.2);
+}
+
+.container .element-container .hexagon-2 {
+    transform: rotate(60deg);
+    position: absolute;
+    top: 53.3px;
+    left: 55.7px;
+}
+
+.container .element-container .hexagon-2:hover {
+    transform: scale(1.2) rotate(60deg);
+}
+
+.container .element-container .hexagon-3 {
+    transform: rotate(120deg);
+    position: absolute;
+    top: 60px;
+    left: 55.7px;
+}
+
+.container .element-container .hexagon-3:hover {
+    transform: scale(1.2) rotate(120deg);
+}
+
+.container .element-container .hexagon-4 {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 63.3px;
+    left: 50px;
+}
+
+.container .element-container .hexagon-4:hover {
+    transform: scale(1.2) rotate(180deg);
+}
+
+.container .element-container .hexagon-5 {
+    transform: rotate(240deg);
+    position: absolute;
+    top: 60px;
+    left: 44.2px;
+}
+
+.container .element-container .hexagon-5:hover {
+    transform: scale(1.2) rotate(240deg);
+}
+
+.container .element-container .hexagon-6 {
+    transform: rotate(300deg);
+    position: absolute;
+    top: 53.3px;
+    left: 44.2px;
+}
+
+.container .element-container .hexagon-6:hover {
+    transform: scale(1.2) rotate(300deg);
+}
+
+/* heptagon */
+
+.container .element-container div[class^=heptagon] {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50px 53.8px, 27.76px 100px, 72.24px 100px, 50px 53.8px);
+    background-color: var(--element-color);
+}
+
+.container .element-container div[class^=heptagon]:hover {
+    background-color: var(--hover-color);
+    transition: 1s;
+}
+
+.container .element-container .heptagon-1:hover {
+    transform: scale(1.2);
+}
+
+.container .element-container .heptagon-2 {
+    transform: rotate(51.42deg);
+    position: absolute;
+    top: 51.3px;
+    left: 53px;
+}
+
+.container .element-container .heptagon-2:hover {
+    transform: scale(1.2) rotate(51.42deg);
+}
+
+.container .element-container .heptagon-3 {
+    transform: rotate(102.82deg);
+    position: absolute;
+    top: 54.5px;
+    left: 53.8px;
+}
+
+.container .element-container .heptagon-3:hover {
+    transform: scale(1.2) rotate(102.82deg);
+}
+
+.container .element-container .heptagon-4 {
+    transform: rotate(154.26deg);
+    position: absolute;
+    top: 57.2px;
+    left: 51.7px;
+}
+
+.container .element-container .heptagon-4:hover {
+    transform: scale(1.2) rotate(154.26deg);
+}
+
+.container .element-container .heptagon-5 {
+    transform: rotate(205.68deg);
+    position: absolute;
+    top: 57.2px;
+    left: 48.4px;
+}
+
+.container .element-container .heptagon-5:hover {
+    transform: scale(1.2) rotate(205.68deg);
+}
+
+.container .element-container .heptagon-6 {
+    transform: rotate(257.1deg);
+    position: absolute;
+    top: 54.5px;
+    left: 46.4px;
+}
+
+.container .element-container .heptagon-6:hover {
+    transform: scale(1.2) rotate(257.1deg);
+}
+
+.container .element-container .heptagon-7 {
+    transform: rotate(308.52deg);
+    position: absolute;
+    top: 51.3px;
+    left: 47px;
+}
+
+.container .element-container .heptagon-7:hover {
+    transform: scale(1.2) rotate(308.52deg);
+}
+
+/* yingyang */
+
+.yingyang {
+    width: 50px;
+    box-sizing: content-box;
+    height: 96px;
+    background: var(--second-color);
+    border-color: var(--element-color);
+    border-style: solid;
+    border-width: 2px 50px 2px 2px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.yingyang:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    background: var(--second-color);
+    border: 18px solid var(--element-color);
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+
+.yingyang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--element-color);
+    border: 18px solid var(--second-color);
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+
+
+/* Buttons */
+
+.button-container {
+    float: left;
+    width: 200px;
+    margin: 6px;
+    text-align: center;
+    display: inline-table;
+    position: relative;
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    padding: 2px 10px;
+    text-align: center;
+    font-size: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* Tooltip */
+
+/*.tooltip {
+    position: relative;
+ }
+ .tooltip::before {
+    background-color: rgb(49, 49, 49, 0.9);
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    content: attr(data-title);
+    display: none;
+    font-size: 12px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    z-index: 1;
+ }
+ .tooltip:hover::before {
+    display: block;
+ }*/
+
+ .tooltip:before {
+    content: ' ';
+    width: 44px;
+    opacity: 0;
+    height: 16px;
+    position: absolute;
+    top: -23px;
+    left: 57px;
+}
+
+ .tooltip {
+    color: white;
+    font-size: 10px;
+    background-color: rgb(90, 90, 90, 0.9);
+    width: 180px;
+    border-radius: 5px;
+    display: block;
+    padding: 5px;
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+    left: 21px;
+    z-index: 1;
+}
+
+.tooltip:after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 24% 100%, 34% 71%, 74% 71%, 52% 20%, 24% 100%, 0 100%);
+    background-color: rgb(68, 68, 68,);
+}
+
+.tooltip:hover {
+    opacity: 1;
+}
