@@ -1,0 +1,112 @@
+
+@keyframes change {
+    0% {
+        transform: translateX(0px);
+        background-color: #ff0000;
+        clip-path: polygon(50px 0px, 0px 100px, 100px 100px);
+    }
+    6.25% {
+        transform: translateX(0px);
+        background-color: #ff0000;
+        clip-path: polygon(50px 0px, 0px 100px, 100px 100px, 50px 0px);
+    }
+
+    12.5% {
+        transform: translateX(100px);
+        background-color: #fff000;
+        clip-path: polygon(50px 0px, 100px 50px, 50px 100px, 0px 50px);
+    }
+    18.75% {
+        transform: translateX(100px);
+        background-color: #fff000;
+        clip-path: polygon(50px 0px, 100px 50px, 50px 100px, 0px 50px, 50px 0px);
+    }
+    
+    25% {
+        transform: translateX(calc(100px + 100px));
+        background-color: 	#00ff00;
+        clip-path: polygon(50px 0px, 100px 38px, 82px 100px, 18px 100px, 0px 38px);
+    }
+    31.25% {
+        transform: translateX(calc(100px + 100px));
+        background-color: 	#00ff00;
+        clip-path: polygon(50px 0px, 100px 38px, 82px 100px, 18px 100px, 0px 38px, 50px 0px);
+    }
+
+    37.5% {
+        transform: translateX(calc(100px + 200px));
+        background-color: #00ffff;
+        clip-path: polygon(50px 0px, 100px 25px, 100px 75px, 50px 100px, 0px 75px, 0px 25px);
+    }
+    43.75% {
+        transform: translateX(calc(100px + 200px));
+        background-color: #00ffff;
+        clip-path: polygon(50px 0px, 100px 25px, 100px 75px, 50px 100px, 0px 75px, 0px 25px, 50px 0px);
+    }
+    
+    50% {
+        transform: translateX(calc(100px + 300px));
+        background-color: #0000ff;
+        clip-path: polygon(50px 0px, 90px 20px, 100px 60px, 75px 100px, 25px 100px, 0px 60px, 10px 20px);
+    }
+    56.25% {
+        transform: translateX(calc(100px + 300px));
+        background-color: #0000ff;
+        clip-path: polygon(50px 0px, 90px 20px, 100px 60px, 75px 100px, 25px 100px, 0px 60px, 10px 20px, 50px 0px);
+    }
+    
+    62.5% {
+        transform: translateX(calc(100px + 400px));
+        background-color: #ff00ff;
+        clip-path: polygon(30px 0px, 70px 0px, 100px 30px, 100px 70px, 70px 100px, 30px 100px, 0px 70px, 0px 30px);
+    }
+    68.75% {
+        transform: translateX(calc(100px + 400px));
+        background-color: #ff00ff;
+        clip-path: polygon(30px 0px, 70px 0px, 100px 30px, 100px 70px, 70px 100px, 30px 100px, 0px 70px, 0px 30px, 30px 0px);
+    }
+    
+    75% {
+        transform: translateX(calc(100px + 500px));
+        background-color: #ff0000;
+        clip-path: polygon(50px 0px, 83px 12px, 100px 43px, 94px 78px, 68px 100px, 32px 100px, 6px 78px, 0px 43px, 17px 12px);
+    }
+    81.25% {
+        transform: translateX(calc(100px + 500px));
+        background-color: #ff0000;
+        clip-path: polygon(50px 0px, 83px 12px, 100px 43px, 94px 78px, 68px 100px, 32px 100px, 6px 78px, 0px 43px, 17px 12px, 50px 0px);
+    }
+    
+    87.5% {
+        transform: translateX(calc(100px + 600px));
+        background-color: #ff8000;
+        clip-path: polygon(50px 0px, 80px 10px, 100px 35px, 100px 70px, 80px 90px, 50px 100px, 20px 90px, 0px 70px, 0px 35px, 20px 10px);
+    }
+    93.75% {
+        transform: translateX(calc(100px + 600px));
+        background-color: #ff8000;
+        clip-path: polygon(50px 0px, 80px 10px, 100px 35px, 100px 70px, 80px 90px, 50px 100px, 20px 90px, 0px 70px, 0px 35px, 20px 10px, 50px 0px);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background-color: #8000ff;
+        clip-path: polygon(50px 0px, 80px 10px, 100px 35px, 100px 70px, 80px 90px, 50px 100px, 20px 90px, 0px 70px, 0px 35px, 20px 10px, 50px 0px);
+    }
+}
+
+.container {
+    height: 120px;
+    width: 60%;
+    display: inline-table;
+}
+
+.shape {
+    width: 100px;
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    animation-name: change;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
