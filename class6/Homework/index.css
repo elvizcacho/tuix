@@ -455,11 +455,13 @@ button {
     z-index: 1;
 }
 
-.tooltip:after {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 24% 100%, 34% 71%, 74% 71%, 52% 20%, 24% 100%, 0 100%);
-    background-color: rgb(68, 68, 68,);
-}
-
 .tooltip:hover {
     opacity: 1;
 }
+
+.shape1 {
+    clip-path: polygon(0 0, 200px 0, 200px 200px, 50px 200px, 50px 150px, 150px 150px, 100px 63.5px, 
+    50px 150px, 50px 200px, 0 200px);
+    background-color: rgb(68, 68, 68, 0.7);
+}
+
