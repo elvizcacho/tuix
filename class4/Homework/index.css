@@ -2,6 +2,8 @@
     --element-color: #ff3335;
     --second-color: #490001;
     --hover-color: #ff9000;
+    --strong-shadow: rgba(168, 168, 168, 0.8);
+    --soft-shadow: rgba(238, 238, 238, 0.6);
 }
 
 .container {
@@ -9,9 +11,10 @@
     width: 200px;
     height: 200px;
     background-color: #eee;
-    border: 1px solid #dee0e2;
     margin: 5px;
     display: inline-table;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0px var(--strong-shadow);
 }
 
 .container .element-container {
@@ -21,6 +24,7 @@
     vertical-align: middle;
     padding: 5px;
     position: relative;
+    filter: drop-shadow(3px 3px 3px var(--strong-shadow));
 }
 
 .container .element-container div {
@@ -35,6 +39,7 @@
     height: 100px;
     clip-path: polygon(50px 71.12px, 0px 100px, 100px 100px, 50px 71.12px);
     background-color: var(--element-color);
+    box-shadow: 3px 3px 3px var(--strong-shadow);
 }
 
 .container .element-container div[class^=triangle]:hover {
