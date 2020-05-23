@@ -1,0 +1,74 @@
+* { box-sizing:border-box; }
+
+:root {
+    --first-blue: rgb(102, 197, 235);
+    --second-blue: rgb(3, 97, 134);
+}
+
+body {
+    background-color: rgb(135, 206, 235);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 600;
+    color: var(--second-blue);
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container .form-container {
+    width: 380px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container .form-container form .imput-container {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    margin: 10px 0;
+    padding: 10px;
+    display: table;
+    box-shadow: 5px 5px 5px 0px rgba(3, 97, 134, 0.1);
+}
+
+.container .form-container form .imput-container label {
+    font-size: 10px;
+    color: var(--second-blue);
+}
+
+.container .form-container form .imput-container input {
+    display: table-cell;
+    vertical-align: middle;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: var(--second-blue);
+    background: transparent;
+    width: 100%;
+}
+
+.container .form-container form .imput-container input:focus {
+    border-color: rgb(255, 255, 255);
+}
+
+.submit {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 16PX;
+    background-color: var(--second-blue);
+    border: 0;
+    border-radius: 2px;
+    margin: 10px 0;
+    padding: 10px;
+    display: table;
+    box-shadow: 5px 5px 5px 0px rgba(3, 97, 134, 0.1);
+}

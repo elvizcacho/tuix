@@ -7,7 +7,7 @@
 
 ### Homework
 - Fix table 
-- Add shadows to shapes 
+- Add shadows to shapes
 - Highlight
 - Animation free work (optional)
 - Create a Login form where: 
