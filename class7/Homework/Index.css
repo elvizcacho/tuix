@@ -3,6 +3,8 @@
 :root {
     --first-blue: rgb(102, 197, 235);
     --second-blue: rgb(3, 97, 134);
+    --nearby-clouds-shadow: rgb(3, 97, 134, .5);
+    --distant-clouds-shadow: rgb(3, 97, 134, .8);
 }
 
 body {
@@ -10,15 +12,21 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-    font-size: 600;
-    color: var(--second-blue);
-}
 
 .container {
     text-align: center;
     margin-top: 100px;
 }
+
+/* title */
+
+h1 {
+    font-size: 600;
+    color: var(--second-blue);
+}
+
+
+/* Form */
 
 .container .form-container {
     width: 380px;
@@ -71,4 +79,58 @@ h1 {
     padding: 10px;
     display: table;
     box-shadow: 5px 5px 5px 0px rgba(3, 97, 134, 0.1);
+}
+
+
+/* Clouds */
+
+.container div[class^=nearby-cloud] {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(20px 20px 30px var(--nearby-clouds-shadow));
+    z-index: 3;
+}
+
+.container .nearby-cloud-1 {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.container .nearby-cloud-2 {
+    position: absolute;
+    top: 300px;
+    left: 1200px;
+}
+
+.container .nearby-cloud-3 {
+    position: absolute;
+    top: 480px;
+    left: 900px;
+}
+
+
+.container div[class^=distant-cloud] {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
+    z-index: 1;
+}
+
+.container .distant-cloud-1 {
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+}
+
+.container .distant-cloud-2 {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+}
+
+.container .distant-cloud-3 {
+    position: absolute;
+    top: 600px;
+    left: 350px;
 }
