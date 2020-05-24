@@ -10,14 +10,3 @@
 - Highlight
 - Use Ilustrator to create custom clouds for form animation. 
 Don't forget to fix the layering.
-- 
-
-
-    
-
-  
- 
-
-
-
- 
