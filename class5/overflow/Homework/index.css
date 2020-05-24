@@ -25,6 +25,7 @@ table {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 11px;
+    table-layout: fixed;
 }
 
 .container {
