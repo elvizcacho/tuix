@@ -68,17 +68,6 @@
     transform: scale(1.2) rotate(240deg);
 }
 
-.triangle-mask {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(68, 68, 68, 0.7);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 64px 100%, 64px 164px, 164px 164px, 113.9px 77.5px,
-    64px 164px, 64px 100%, 0 100%);
-    z-index: 1;
-}
 
 /* square */
 
@@ -442,7 +431,7 @@ button {
     display: block;
  }*/
 
- .tooltip:before {
+.tooltip:before {
     content: ' ';
     width: 44px;
     opacity: 0;
@@ -452,7 +441,7 @@ button {
     left: 57px;
 }
 
- .tooltip {
+.tooltip {
     color: white;
     font-size: 10px;
     background-color: rgb(90, 90, 90, 0.9);
@@ -471,11 +460,21 @@ button {
     opacity: 1;
 }
 
+/* Highlight */
 
+.triangle-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(68, 68, 68, 0.7);
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 64px 100%, 64px 164px, 164px 164px, 113.9px 77.5px,
+    64px 164px, 64px 100%, 0 100%);
+    z-index: 1;
+}
 
-
-
-
-
-
-
+.highlight:hover .triangle-mask {
+    opacity: 1;
+}
