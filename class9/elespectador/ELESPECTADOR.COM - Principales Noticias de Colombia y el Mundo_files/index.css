@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+}
+
+.banner-crucigrama {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-crucigrama:hover::after {
+  width: 120%;
+  height: 120%;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-crucigrama:hover::before {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-crucigrama::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-image: url("foto-espectagrama.jpg");
+  background-size: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-crucigrama::before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-crucigrama h2 {
+  background-image: url("icono.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 3rem;
+  color: white;
+  position: relative;
+  z-index: 99;
+  font-size: 2rem;
+}

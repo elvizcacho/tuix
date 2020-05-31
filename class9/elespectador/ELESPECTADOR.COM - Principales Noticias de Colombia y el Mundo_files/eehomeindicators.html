@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://www.elespectador.com/sites/default/files/indicadores/eehomeindicators.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title></title>
+<link href="./app.css" type="text/css" rel="stylesheet">
+<script src="./jquery.min(1).js"></script>
+<script>
+	var redirect = "http://widgetsdataifx.blob.core.windows.net/widgetsdataifx/Scripts/avisolegal.html";	
+	if(document.referrer.indexOf("elespectador.com") == -1 && document.referrer.indexOf("widgetsdataifx") == -1)
+	{if (top.location != self.location && document.referrer != ""){
+	var s = 'http://137.135.67.207:8087/RegistroWidgets/Registro.ashx?w='+self.location+'&p='+document.referrer;
+	$(document).ready(function(){$.ajax({ data: { 'x':'dataifx'},type:'GET',url:s,cache:false,success: function(response) { self.location  = redirect;},error: function(response) { self.location  = redirect;}});}); }}
+	</script>
+<script>
+	function iraeconomia(){top.location  = 'http://www.elespectador.com/economia';}
+	</script>
+</head>
+<body>
+<div class="home-indicators-content">
+<div class="indicator-container">
+<div class="indicator-description">
+<div class="indicator-title">Dólar TRM</div>
+<div class="indicator-value-container">
+<div class="indicator-value-title">VALOR</div>
+<div class="indicator-value-title">$3,942.92</div>
+</div>
+<div class="indicator-value-container">
+<div class="indicator-value-title">CAMBIO</div>
+<div class="indicator-value-title">0.00</div>
+</div>
+<div class="indicator-value-container">
+<div class="indicator-value-title">% CAMBIO</div>
+<div class="indicator-value-title">0.00%</div>
+</div>
+</div>
+<div class="indicator-trend "></div>
+</div>
+<div class="indicator-container">
+<div class="indicator-description">
+<div class="indicator-title">EUR/COP</div>
+<div class="indicator-value-container">
+<div class="indicator-value-title">VALOR</div>
+<div class="indicator-value-title">$4,481.75</div>
+</div>
+<div class="indicator-value-container">
+<div class="indicator-value-title">CAMBIO</div>
+<div class="indicator-value-title">93.28</div>
+</div>
+<div class="indicator-value-container">
+<div class="indicator-value-title">% CAMBIO</div>
+<div class="indicator-value-title">2.13%</div>
+</div>
+</div>
+<div class="indicator-trend up"></div>
+</div>
+<a class="more" href="https://www.elespectador.com/sites/default/files/indicadores/eehomeindicators.html#" onclick="iraeconomia();">VER MÁS EN ECONOMÍA</a>
+</div>
+
+</body></html>
