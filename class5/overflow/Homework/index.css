@@ -1,4 +1,7 @@
 
+* {
+    box-sizing:border-box;
+}
 
 :root {
     --main-color: #eee;
@@ -30,39 +33,47 @@ table {
 
 .container {
     width: 100%;
-    height: 170px;
 }
 
-.main-table {
+.container .head-container {
+    width: calc(100% - 8px);
+    float: left;
+}
+
+.container .head-container .head-table {
     font-weight: 600;
+    margin: 0;
+    width: 100%;
 }
 
-.main-table tbody tr td,
-.main-table thead tr th {
+.container .head-container .head-table tbody tr td,
+.container .head-container .head-table thead tr th {
     border: 1px solid var(--main-color);
     padding: 5px
 }
 
-.main-table thead tr th {
+.container .head-container .head-table thead tr th {
     background-color: #eee;
-    width: calc(25% * (100% + 8px));
+    width: 25%;
     text-align: left;
     position: relative;
 }
 
-.main-table thead tr th:hover {
+.container .head-container .head-table thead tr th:hover {
     background-color: #d9d9d9;
     border-color: var(--second-color);
 }
 
-/* .main-table thead tr .fixer-cell {
-    width: 8px;
-}  */
+/* Align columns */
 
-.main-table tbody tr td.no-padding {
-    padding: 0;
-    border: #eee;
+.container .aligner {
+    float: right;
+    width: 8px;
+    height: 27px;
+    background-color: var(--main-color);
+    margin: 0;
 }
+
 
 /* Filters Menu */
 
@@ -106,27 +117,31 @@ table {
 
 .filters-menu-container table tr td form input {
     width: 70px;
+    height: 15px;
 }
 
 .filters-menu-container table tr td.center {
     text-align: center;
+    width: 15%;
 }
+
 
 /* Internal Table */
 
-.main-table tbody tr td .container-internal-table {
+.container .container-internal-table {
     width: 100%;
     height: 131px;
     overflow-y: scroll;
 }
 
-.main-table tbody tr td .container-internal-table .internal-table tbody {
+.container .container-internal-table .internal-table tbody {
     font-weight: 400;
 }
 
-.main-table tbody tr td .container-internal-table .internal-table tbody tr td  {
-    /*border: 1px solid var(--main-color);*/
-    width: calc(25% + 2px);
+.container .container-internal-table .internal-table tbody tr td  {
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    width: 25%;
     position: relative;
 }
 
