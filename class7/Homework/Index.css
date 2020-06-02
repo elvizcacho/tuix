@@ -21,6 +21,8 @@ body {
 /* title */
 
 h1 {
+    position: absolute;
+    top: 0;
     font-size: 600;
     color: var(--second-blue);
     z-index: 2;
@@ -34,7 +36,6 @@ h1 {
     padding: 20px;
     margin: 0 auto;
     text-align: center;
-    z-index: 2;
 }
 
 .container .form-container form .imput-container {
@@ -90,42 +91,43 @@ h1 {
     width: 200px;
     height: 200px;
     filter: drop-shadow(20px 20px 40px var(--nearby-clouds-shadow));
+    z-index: 3;
 }
 
 .container .nearby-cloud-1 {
     position: absolute;
     top: 100px;
-    left: 400px;
+    left: -200px;
     animation-name: near-clouds-left-to-right;
-    animation-duration: 8s;
-    animation-fill-mode: forwards;
+    animation-duration: 130s;
+    animation-timing-function: linear;
 }
 
 .container .nearby-cloud-2 {
     position: absolute;
-    top: 300px;
-    left: 830px;
-    animation-name: near-clouds-right-to-left;
-    animation-duration: 10s;
-    animation-fill-mode: forwards;
+    top: 200px;
+    left: -200px;
+    animation-name: near-clouds-left-to-right;
+    animation-duration: 90s;
+    animation-timing-function: linear;
 }
 
 .container .nearby-cloud-3 {
     position: absolute;
-    top: 480px;
-    left: 750px;
-    animation-name: near-clouds-right-to-left;
-    animation-duration: 18s;
-    animation-fill-mode: forwards;
+    top: 380px;
+    left: -200px;
+    animation-name: near-clouds-left-to-right;
+    animation-duration: 100s;
+    animation-timing-function: linear;
 }
 
 .container .nearby-cloud-4 {
     position: absolute;
     top: 450px;
-    left: 1000px;
+    left: -200px;
     animation-name: others-clouds-to-right;
-    animation-duration: 13s;
-    animation-fill-mode: forwards;
+    animation-duration: 60s;
+    animation-timing-function: linear;
 }
 
 
@@ -133,22 +135,24 @@ h1 {
     width: 100px;
     height: 100px;
     filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
+    z-index: 0;
 }
 
 .container .distant-cloud-1 {
     position: absolute;
     top: 100px;
-    left: 850px;
-    animation-name: dist-clouds-right-to-left;
+    left: 1700px;
+    animation-name: dist-clouds-left-to-right;
     animation-duration: 18s;
-    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: reverse;
 }
 
 .container .distant-cloud-2 {
     position: absolute;
     top: 200px;
     left: 200px;
-    animation-name: others-clouds-to-left;
+    animation-name: others-clouds-to-right;
     animation-duration: 8s;
     animation-fill-mode: forwards;
 }
@@ -176,44 +180,24 @@ h1 {
 @keyframes dist-clouds-left-to-right {
     0% {
         transform: translateX(0px);
-        z-index: 1;
+    }
+    50% {
+        transform: translateX(-1700px);
     }
     100% {
-        transform: translateX(550px);
-        z-index: 1;
+        transform: translateX(0px);
     }
 }
 
 @keyframes near-clouds-left-to-right {
     0% {
         transform: translateX(0px);
-        z-index: 3;
+    }
+    50% {
+        transform: translateX(1700px);
     }
     100% {
-        transform: translateX(550px);
-        z-index: 3;
-    }
-}
-
-@keyframes dist-clouds-right-to-left {
-    0% {
         transform: translateX(0px);
-        z-index: 1;
-    }
-    100% {
-        transform: translateX(-600px);
-        z-index: 1;
-    }
-}
-
-@keyframes near-clouds-right-to-left {
-    0% {
-        transform: translateX(0px);
-        z-index: 3;
-    }
-    100% {
-        transform: translateX(-600px);
-        z-index: 3;
     }
 }
 
@@ -221,16 +205,10 @@ h1 {
     0% {
         transform: translateX(0px);
     }
-    100% {
-        transform: translateX(100px);
+    50% {
+        transform: translateX(1700px);
     }
-}
-
-@keyframes others-clouds-to-left {
-    0% {
+    100% {
         transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(-100px);
     }
 }
