@@ -64,6 +64,23 @@ table {
     border-color: var(--second-color);
 }
 
+.container .head-container .head-table thead tr th.last-column {
+    position: relative;
+}
+
+.container .head-container .head-table thead tr th.last-column .over-aligner {
+    position: absolute;
+    top: -1px;
+    right: -9px;
+    background-color: var(--main-color);
+    width: 8px;
+    height: 27px;
+}
+
+.container .head-container .head-table thead tr th:hover .over-aligner {
+    background-color: #d9d9d9;
+}
+
 /* Align columns */
 
 .container .aligner {
