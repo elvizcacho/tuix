@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(135, 206, 235);
+    background-color: #87ceeb;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -22,7 +22,9 @@ body {
 
 h1 {
     position: absolute;
-    top: 0;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 600;
     color: var(--second-blue);
     z-index: 2;
@@ -32,17 +34,22 @@ h1 {
 /* Form */
 
 .container .form-container {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 380px;
     padding: 20px;
     margin: 0 auto;
     text-align: center;
+    z-index: 2;
 }
 
 .container .form-container form .imput-container {
     width: 100%;
     height: 50px;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(220, 241, 249);
     border-radius: 2px;
     margin: 10px 0;
     padding: 10px;
@@ -91,42 +98,43 @@ h1 {
     width: 200px;
     height: 200px;
     filter: drop-shadow(20px 20px 40px var(--nearby-clouds-shadow));
-    z-index: 3;
+    z-index: 4;
 }
 
 .container .nearby-cloud-1 {
     position: absolute;
-    top: 100px;
+    top: 10px;
     left: -200px;
     animation-name: near-clouds-left-to-right;
-    animation-duration: 130s;
+    animation-duration: 190s;
     animation-timing-function: linear;
 }
 
 .container .nearby-cloud-2 {
     position: absolute;
     top: 200px;
-    left: -200px;
+    left: -300px;
     animation-name: near-clouds-left-to-right;
-    animation-duration: 90s;
+    animation-duration: 230s;
     animation-timing-function: linear;
+    animation-delay: 5s;
 }
 
 .container .nearby-cloud-3 {
     position: absolute;
-    top: 380px;
+    top: 320px;
     left: -200px;
     animation-name: near-clouds-left-to-right;
-    animation-duration: 100s;
+    animation-duration: 150s;
     animation-timing-function: linear;
 }
 
 .container .nearby-cloud-4 {
     position: absolute;
     top: 450px;
-    left: -200px;
+    left: -400px;
     animation-name: others-clouds-to-right;
-    animation-duration: 60s;
+    animation-duration: 200s;
     animation-timing-function: linear;
 }
 
@@ -135,54 +143,99 @@ h1 {
     width: 100px;
     height: 100px;
     filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
-    z-index: 0;
 }
 
 .container .distant-cloud-1 {
     position: absolute;
     top: 100px;
-    left: 1700px;
-    animation-name: dist-clouds-left-to-right;
-    animation-duration: 18s;
+    left: 1450px;
+    z-index: 1;
+
+    animation-name: dist-clouds-right-to-left;
+    animation-duration: 200s;
     animation-timing-function: linear;
-    animation-direction: reverse;
 }
 
 .container .distant-cloud-2 {
     position: absolute;
     top: 200px;
-    left: 200px;
-    animation-name: others-clouds-to-right;
-    animation-duration: 8s;
-    animation-fill-mode: forwards;
+    left: 1500px;
+    z-index: 1;
+
+    animation-name: dist-clouds-right-to-left;
+    animation-duration: 220s;
+    animation-timing-function: linear;
+    animation-delay: 15s;
 }
 
 .container .distant-cloud-3 {
     position: absolute;
     top: 350px;
-    left: 500px;
-    animation-name: dist-clouds-left-to-right;
-    animation-duration: 18s;
-    animation-fill-mode: forwards;
+    left: 1500px;
+    z-index: 1;
+
+    animation-name: dist-clouds-right-to-left;
+    animation-duration: 190s;
+    animation-timing-function: linear;
 }
 
 .container .distant-cloud-4 {
     position: absolute;
     top: 650px;
-    left: 550px;
-    animation-name: dist-clouds-left-to-right;
-    animation-duration: 10s;
+    left: 1450px;
+    z-index: 1;
+
+    animation-name: dist-clouds-right-to-left;
+    animation-duration: 180s;
+    animation-timing-function: linear;
+}
+
+/* Plane */
+
+.plane {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
+    position: absolute;
+    top: 350px;
+    left: 1500px;
+    z-index: 3;
+
+    animation-name: plane;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-delay: 25s;
     animation-fill-mode: forwards;
 }
 
+/* Paraglider */
+
+.paraglider {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
+    position: absolute;
+    top: 350px;
+    left: 750px;
+    z-index: 3;
+
+    animation-name: paraglider;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-delay: 34s;
+    animation-fill-mode: forwards;
+}
+
+
 /* Animations */
 
-@keyframes dist-clouds-left-to-right {
+@keyframes dist-clouds-right-to-left {
     0% {
         transform: translateX(0px);
     }
     50% {
-        transform: translateX(-1700px);
+        transform: translateX(-1500px);
     }
     100% {
         transform: translateX(0px);
@@ -201,14 +254,34 @@ h1 {
     }
 }
 
-@keyframes others-clouds-to-right {
+@keyframes plane {
     0% {
-        transform: translateX(0px);
+        transform: translateX(0px) translateY(0px);
+    }
+    45% {
+        transform: translateX(-700px) translateY(20px);
     }
     50% {
-        transform: translateX(1700px);
+        transform: translateX(-750px)translateY(-30px) ;
+    }
+    55% {
+        transform: translateX(-800px) translateY(-10px);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(-1600px);
+    }
+}
+
+@keyframes paraglider {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(300px) translateY(400px);
+        opacity: 1;
     }
 }
