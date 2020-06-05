@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: rgb(169,169,169);
+    --yellow: rgb(255,215,0);
+    --red: rgb(255,0,0);
+    --soft-blue: rgb(0, 155, 192);
+    --black: rgb(0,0,0);
+}
+
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header .head-container {
+    max-width: 1360px;
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .head-container .left-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header .head-container .left-container .brand {
+    margin-right: 15px;
+}
+
+.header .head-container .left-container .brand .logo {
+    width: auto;
+    max-height: 55px;
+    height: 100%;
+}
+
+.header .head-container .left-container .date {
+    display: flex;
+    align-items: center;
+}
+
+.header .head-container .left-container .date span {
+    font-size: 12px;
+}
+
+
+.header .head-container .right-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .head-container .right-container .social-networks,
+.header .head-container .right-container .log-and-search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .head-container .right-container .social-networks {
+    margin-right: 10px;
+}
+
+.header .head-container .right-container .log-and-search {
+    margin-left: 10px;
+}
+
+.header .head-container .right-container .social-networks div {
+    width: 34px; 
+    height: 34px;
+    margin: 0px 5px;
+    color: rgb(255,255,255);
+    border-radius: 100%;
+    padding: 9px;
+    text-align: center;
+}
+
+.header .head-container .right-container .social-networks div[class*=btn-]:hover {
+    background-color: var(--grey);
+    color: var(--black);
+}
+
+.header .head-container .right-container .social-networks div.btn-1 {
+    background-color: var(--red);
+}
+
+.header .head-container .right-container .social-networks div.btn-2 {
+    background-color: var(--yellow);
+}
+
+.header .head-container .right-container .social-networks div.btn-3,
+.header .head-container .right-container .social-networks div.btn-4,
+.header .head-container .right-container .social-networks div.btn-5,
+.header .head-container .right-container .social-networks div.btn-6 {
+    background-color: var(--grey);
+}
+
+
+.header .head-container .right-container .log-and-search .subscribe,
+.header .head-container .right-container .log-and-search .loggin,
+.header .head-container .right-container .log-and-search .search {
+    height: 34px;
+    margin: 0px 5px;
+    border-radius: 2px;
+    padding: 9px;
+    text-align: center;
+}
+
+.header .head-container .right-container .log-and-search div:hover {
+    background-color: var(--grey);
+    color: var(--black);
+}
+
+.header .head-container .right-container .log-and-search .subscribe {
+    background-color: var(--yellow);
+}
+
+.header .head-container .right-container .log-and-search .loggin {
+    color: rgb(255,255,255);
+    background-color: var(--black);
+}
+
+
+/* NAV BAR */
+
+.nav-bar-container {
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar-container .buttons-container {
+    max-width: 1360px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar-container .buttons-container div {
+    color: rgb(255,255,255);
+    padding: 10px;
+}
+
+.nav-bar-container .buttons-container div:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+
+/* BODY */
+
+.body-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.body-container .coronavirus {
+    margin: 20px 0px;
+}
+
+.body-container .coronavirus:hover {
+    transform: scale(1.02);
+    transition: all .2s;
+}
+
+.body-container .main-news-container {
+    display: flex;
+}
+
+.body-container .main-news-container > div {
+    margin: 0px 15px;
+}
+
+.body-container .main-news-container .first-main-news {
+    flex-grow: 2;
+    position: relative;
+}
+
+.body-container .main-news-container .first-main-news .text-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.body-container .main-news-container .first-main-news .text-container .text {
+    width: 100%;
+    padding: 10px;
+    color: rgb(255,255,255);
+    background-color: rgba(0,0,0,.8);
+}
+
+.body-container .main-news-container .first-main-news .text-container .text .category {
+    font-size: 12px;
+    width: 100%;
+}
+
+.body-container .main-news-container .first-main-news .text-container .text .title {
+    font-size: 30px;
+    width: 100%;
+}
+
+
+.body-container .main-news-container .second-main-news {
+    flex-grow: 1;
+}
+
+.body-container .main-news-container .second-main-news > div {
+    border-bottom: solid .5px var(--red);
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.body-container .main-news-container .second-main-news div .img-container,
+.body-container .main-news-container .second-main-news div .text {
+    flex-grow: 1;
+    display: flex;
+}
+
+.body-container .main-news-container .second-main-news div .text {
+    padding: 0px 10px;
+    flex-direction: column;
+}
+
+.body-container .main-news-container .second-main-news div .text .title {
+    font-size: 20px;
+}
+
+.body-container .main-news-container .second-main-news div .text .category {
+    font-size: 12px;
+    color: var(--red);
+}
