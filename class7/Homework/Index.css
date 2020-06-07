@@ -10,6 +10,7 @@
 body {
     background-color: #87ceeb;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -198,7 +199,7 @@ h1 {
     filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
     position: absolute;
     top: 350px;
-    left: 1500px;
+    left: calc(100vw);
     z-index: 3;
 
     animation-name: plane;
