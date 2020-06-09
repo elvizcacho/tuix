@@ -11,6 +11,7 @@ body {
     background-color: #87ceeb;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
@@ -105,7 +106,7 @@ h1 {
 .container .nearby-cloud-1 {
     position: absolute;
     top: 10px;
-    left: -200px;
+    left: calc(0vw - 200px);
     animation-name: near-clouds-left-to-right;
     animation-duration: 190s;
     animation-timing-function: linear;
@@ -114,7 +115,7 @@ h1 {
 .container .nearby-cloud-2 {
     position: absolute;
     top: 200px;
-    left: -300px;
+    left: calc(0vw - 200px);
     animation-name: near-clouds-left-to-right;
     animation-duration: 230s;
     animation-timing-function: linear;
@@ -124,16 +125,16 @@ h1 {
 .container .nearby-cloud-3 {
     position: absolute;
     top: 320px;
-    left: -200px;
+    left: calc(0vw - 200px);
     animation-name: near-clouds-left-to-right;
-    animation-duration: 150s;
+    animation-duration: 140s;
     animation-timing-function: linear;
 }
 
 .container .nearby-cloud-4 {
     position: absolute;
     top: 450px;
-    left: -400px;
+    left: calc(0vw - 200px);
     animation-name: others-clouds-to-right;
     animation-duration: 200s;
     animation-timing-function: linear;
@@ -149,7 +150,7 @@ h1 {
 .container .distant-cloud-1 {
     position: absolute;
     top: 100px;
-    left: 1450px;
+    left: 100vw;
     z-index: 1;
 
     animation-name: dist-clouds-right-to-left;
@@ -160,7 +161,7 @@ h1 {
 .container .distant-cloud-2 {
     position: absolute;
     top: 200px;
-    left: 1500px;
+    left: 100vw;
     z-index: 1;
 
     animation-name: dist-clouds-right-to-left;
@@ -172,22 +173,22 @@ h1 {
 .container .distant-cloud-3 {
     position: absolute;
     top: 350px;
-    left: 1500px;
+    left: 100vw;
     z-index: 1;
 
     animation-name: dist-clouds-right-to-left;
-    animation-duration: 190s;
+    animation-duration: 180s;
     animation-timing-function: linear;
 }
 
 .container .distant-cloud-4 {
     position: absolute;
     top: 650px;
-    left: 1450px;
+    left: 100vw;
     z-index: 1;
 
     animation-name: dist-clouds-right-to-left;
-    animation-duration: 180s;
+    animation-duration: 230s;
     animation-timing-function: linear;
 }
 
@@ -199,7 +200,7 @@ h1 {
     filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
     position: absolute;
     top: 350px;
-    left: calc(100vw);
+    left: 100vw;
     z-index: 3;
 
     animation-name: plane;
@@ -218,7 +219,7 @@ h1 {
     filter: drop-shadow(5px 5px 5px var(--distant-clouds-shadow));
     position: absolute;
     top: 350px;
-    left: 750px;
+    left: 50vw;
     z-index: 3;
 
     animation-name: paraglider;
@@ -236,7 +237,7 @@ h1 {
         transform: translateX(0px);
     }
     50% {
-        transform: translateX(-1500px);
+        transform: translateX(calc(-100vw - 100px));
     }
     100% {
         transform: translateX(0px);
@@ -248,7 +249,7 @@ h1 {
         transform: translateX(0px);
     }
     50% {
-        transform: translateX(1700px);
+        transform: translateX(calc(100vw + 200px));
     }
     100% {
         transform: translateX(0px);
@@ -260,16 +261,16 @@ h1 {
         transform: translateX(0px) translateY(0px);
     }
     45% {
-        transform: translateX(-700px) translateY(20px);
+        transform: translateX(-50vw) translateY(20px);
     }
     50% {
-        transform: translateX(-750px)translateY(-30px) ;
+        transform: translateX(calc(-50vw - 50px)) translateY(-30px);
     }
     55% {
-        transform: translateX(-800px) translateY(-10px);
+        transform: translateX(calc(-50vw - 100px)) translateY(-10px);
     }
     100% {
-        transform: translateX(-1600px);
+        transform: translateX(calc(-100vw - 100px));
     }
 }
 
@@ -282,7 +283,7 @@ h1 {
         opacity: 0.5;
     }
     100% {
-        transform: translateX(300px) translateY(400px);
+        transform: translateX(300px) translateY(100vh);
         opacity: 1;
     }
 }
