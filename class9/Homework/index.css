@@ -391,13 +391,11 @@
     display: flex;
     justify-content: space-between;
     margin: 10px 0px;
-    height: 560px;
 }
 
 .body-container .other-news-second-container .news-container {
     width: var(--grid-1);
     padding: 0px 15px;
-    position: relative;
 }
 
 .body-container .other-news-second-container .news-container .component-news {
