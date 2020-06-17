@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../Homework/imgs/intro2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+    font-family: 'Raleway',sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template:
+        [header-start] "head" auto [header-end]
+        [menu-start] "menu" auto [menu-end]
+        [body-start] "body" auto [body-end]
+        [footer-star] "footer" auto [footer-end]
+        / auto;
+
+    width: 100%;
+}
+
+/* head */
+
+.container .header {
+    grid-area: head;
+    display: flex;
+    justify-content: center; 
+    padding: 10px;
+}
+
+.container .header img {
+    width: 243px;
+}
+
+/* menu */
+
+.container .menu-container {
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 28, 33);
+    padding: 0 10px;
+}
+
+.container .menu-container div {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+/* body */
+
+.container .body {
+    grid-area: body;
+    display: grid;
+    grid-template: 
+        [row1-star] "row1" auto [row1-end]
+        [row2-star] "row2" auto [row2-end]
+        [row3-star] "row3" auto [row3-end]
+        [row4-star] "row4" auto [row4-end]
+        [row5-star] "row5" auto [row5-end]
+        [row6-star] "row6" auto [row6-end]
+        [row7-star] "row7" auto [row7-end]
+        [row8-star] "row8" auto [row8-end]
+        [row9-star] "row9" auto [row9-end]
+        [row10-star] "row10" auto [row10-end]
+        [row11-star] "row11" auto [row11-end]
+        [row12-star] "row12" auto [row12-end]
+        [row13-star] "row13" auto [row13-end]
+        [row14-star] "row14" auto [row14-end]
+        [row15-star] "row15" auto [row15-end]
+        [row16-star] "row16" auto [row16-end]
+        [row17-star] "row17" auto [row17-end]
+        [row18-star] "row18" auto [row18-end]
+        [row19-star] "row19" auto [row19-end]
+        [row20-star] "row20" auto [row20-end]
+        [row21-star] "row21" auto [row21-end]
+        [row22-star] "row22" auto [row22-end]
+        [row23-star] "row23" auto [row23-end]
+        [row24-star] "row24" auto [row24-end]
+        [row25-star] "row25" auto [row25-end]
+        [row26-star] "row26" auto [row26-end]
+        [row27-star] "row27" auto [row27-end]
+        [row28-star] "row28" auto [row28-end]
+        [row29-star] "row29" auto [row29-end]
+        [row30-star] "row30" auto [row30-end]
+        [row31-star] "row31" auto [row31-end]
+        /auto;
+    justify-items: center;
+    align-items: space-around;
+
+    margin: 20px 0px;
+}
+
+.container .body div {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 20px;
+    padding: 5px;
+}
+
+.container .body div img {
+    width: 125%;
+} 
+
+/* footer */
+
+.container .footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    color: rgb(168, 168, 168);
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    padding: 10px;
+}
+
+.container .footer div span {
+    text-align: center;
+    font-weight: 200;
+}
+
+.container .footer div span.final-text {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.container .footer div span.copyright {
+    font-size: 10px;
+}
