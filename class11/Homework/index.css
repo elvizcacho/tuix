@@ -39,6 +39,7 @@ body {
     width: 243px;
 }
 
+/* end head */
 
 /* menu */
 
@@ -108,7 +109,7 @@ body {
 
 @media screen and (min-width: 426px) and (max-width: 768px), (min-width: 769px) {
     .container .menu-container {
-        background-color: rgb(18, 28, 33, .9);
+        background-color: rgb(18, 28, 33, .8);
     }
 
     .container .menu-container .menu-title,
@@ -129,6 +130,8 @@ body {
         width: fit-content;
     }
 }
+
+/* end menu */
 
 /* body */
 
@@ -171,18 +174,53 @@ body {
     justify-items: center;
     align-items: space-around;
 
-    margin: 20px 0px;
+    margin: 20px;
 }
 
-.container .body div {
+.container .body .search-container {
+    display: none;
+    flex-direction: column;    
+}
+
+.container .body .search-container > div {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.container .body .search-container .sentence {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.container .body .search-container .finder form input {
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 2px rgb(168, 168, 168, .8);
+}
+
+.container .body .search-container .finder form input::placeholder {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.container .body .search-container .scroll-down {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.container .body > div {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin: 0 20px;
     padding: 5px;
 }
 
-.container .body div img {
+.container .body > div img {
     width: 125%;
 } 
 
@@ -209,14 +247,93 @@ body {
         margin: 20px;
     }
 
-    .container .body div {
+    .container .body > div {
         margin: 0 5px;
     }
 
-    .container .body div img {
-        width: 150%;
+    .container .body > div img {
+        width: 125%;
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container .body {
+        grid-template: 
+            [search-star] "search search search" 190px [search-end]
+            [row1-star] "season1 season2 season3" 190px [row1-end]
+            [row2-star] "season4 season5 season6" 190px [row2-end]
+            [row3-star] "season7 season8 season9" 190px [row3-end]
+            [row4-star] "season10 season11 season12" 190px [row4-end]
+            [row5-star] "season13 season14 season15" 190px [row5-end]
+            [row6-star] "season16 season17 season18" 190px [row6-end]
+            [row7-star] "season19 season20 season21" 190px [row7-end]
+            [row8-star] "season22 season23 season24" 190px [row8-end]
+            [row9-star] "season25 season26 season27" 190px [row9-end]
+            [row10-star] "season28 season29 season30" 190px [row10-end]
+            [row11-star] "season31 . ." 190px [row11-end]
+            /auto auto auto;
+        justify-content: space-around;
+        align-items: space-around;
+
+        margin: 20px;
+    }
+
+    .container .body .search-container {
+        grid-area: search;
+        display: flex;
+    }
+
+    .container .body > div {
+        margin: 0 5px;
+    }
+
+    .container .body > div img {
+        width: 135%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container .body {
+        grid-template: 
+            [search-star] "search search search" 190px [search-end]
+            [row1-star] "season1 season2 season3" 190px [row1-end]
+            [row2-star] "season4 season5 season6" 190px [row2-end]
+            [row3-star] "season7 season8 season9" 190px [row3-end]
+            [row4-star] "season10 season11 season12" 190px [row4-end]
+            [row5-star] "season13 season14 season15" 190px [row5-end]
+            [row6-star] "season16 season17 season18" 190px [row6-end]
+            [row7-star] "season19 season20 season21" 190px [row7-end]
+            [row8-star] "season22 season23 season24" 190px [row8-end]
+            [row9-star] "season25 season26 season27" 190px [row9-end]
+            [row10-star] "season28 season29 season30" 190px [row10-end]
+            [row11-star] "season31 . ." 190px [row11-end]
+            /auto auto auto;
+        justify-content: space-around;
+        align-items: space-around;
+
+        margin: 20px;
+    }
+
+    .container .body .search-container {
+        grid-area: search;
+        display: flex;
+    }
+
+    .container .body > div {
+        margin: 0 5px;
+    }
+
+    .container .body > div img {
+        width: 100%;
+    }
+
+    .container .body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+/* end body */
 
 /* footer */
 
@@ -246,3 +363,5 @@ body {
 .container .footer div span.copyright {
     font-size: 10px;
 }
+
+/* end footer */
