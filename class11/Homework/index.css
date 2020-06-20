@@ -61,14 +61,28 @@ body {
     font-weight: 200;
 }
 
+.container .menu-container .menu::before {
+    content: ' ';
+    width: 30px;
+    opacity: 0;
+    height: 26px;
+    position: absolute;
+    top: -48px;
+    right: 13px;
+}
+
 .container .menu-container .menu {
     position: absolute;
     top: 70px;
     left: 0;
-    display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0;
+    opacity: 0;
+}
+
+.container .menu-container .menu:hover {
+    opacity: 1;
 }
 
 .container .menu-container .menu div {
@@ -82,15 +96,37 @@ body {
     letter-spacing: 2px;
 }
 
+.container .menu-container .menu div:hover {
+    background-color: rgb(18, 28, 33);
+}
+
 .container .menu-container .menu div i {
     margin-right: 5px;
 }
 
+/* tablet and desktop */
 
-
-@media screen and (min-width: 426px) and (max-width: 1024px) {
+@media screen and (min-width: 426px) and (max-width: 768px), (min-width: 769px) {
     .container .menu-container {
         background-color: rgb(18, 28, 33, .9);
+    }
+
+    .container .menu-container .menu-title,
+    .container .menu-container .hamburguer-menu {
+        display: none;
+    }
+
+    .container .menu-container .menu {
+        position: sticky;
+        flex-direction: initial;
+        justify-content: center;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .container .menu-container .menu div {
+        background-color: transparent;
+        width: fit-content;
     }
 }
 
@@ -100,37 +136,37 @@ body {
     grid-area: body;
     display: grid;
     grid-template: 
-        [row1-star] "row1" auto [row1-end]
-        [row2-star] "row2" auto [row2-end]
-        [row3-star] "row3" auto [row3-end]
-        [row4-star] "row4" auto [row4-end]
-        [row5-star] "row5" auto [row5-end]
-        [row6-star] "row6" auto [row6-end]
-        [row7-star] "row7" auto [row7-end]
-        [row8-star] "row8" auto [row8-end]
-        [row9-star] "row9" auto [row9-end]
-        [row10-star] "row10" auto [row10-end]
-        [row11-star] "row11" auto [row11-end]
-        [row12-star] "row12" auto [row12-end]
-        [row13-star] "row13" auto [row13-end]
-        [row14-star] "row14" auto [row14-end]
-        [row15-star] "row15" auto [row15-end]
-        [row16-star] "row16" auto [row16-end]
-        [row17-star] "row17" auto [row17-end]
-        [row18-star] "row18" auto [row18-end]
-        [row19-star] "row19" auto [row19-end]
-        [row20-star] "row20" auto [row20-end]
-        [row21-star] "row21" auto [row21-end]
-        [row22-star] "row22" auto [row22-end]
-        [row23-star] "row23" auto [row23-end]
-        [row24-star] "row24" auto [row24-end]
-        [row25-star] "row25" auto [row25-end]
-        [row26-star] "row26" auto [row26-end]
-        [row27-star] "row27" auto [row27-end]
-        [row28-star] "row28" auto [row28-end]
-        [row29-star] "row29" auto [row29-end]
-        [row30-star] "row30" auto [row30-end]
-        [row31-star] "row31" auto [row31-end]
+        [row1-star] "season1" auto [row1-end]
+        [row2-star] "season2" auto [row2-end]
+        [row3-star] "season3" auto [row3-end]
+        [row4-star] "season4" auto [row4-end]
+        [row5-star] "season5" auto [row5-end]
+        [row6-star] "season6" auto [row6-end]
+        [row7-star] "season7" auto [row7-end]
+        [row8-star] "season8" auto [row8-end]
+        [row9-star] "season9" auto [row9-end]
+        [row10-star] "season10" auto [row10-end]
+        [row11-star] "season11" auto [row11-end]
+        [row12-star] "season12" auto [row12-end]
+        [row13-star] "season13" auto [row13-end]
+        [row14-star] "season14" auto [row14-end]
+        [row15-star] "season15" auto [row15-end]
+        [row16-star] "season16" auto [row16-end]
+        [row17-star] "season17" auto [row17-end]
+        [row18-star] "season18" auto [row18-end]
+        [row19-star] "season19" auto [row19-end]
+        [row20-star] "season20" auto [row20-end]
+        [row21-star] "season21" auto [row21-end]
+        [row22-star] "season22" auto [row22-end]
+        [row23-star] "season23" auto [row23-end]
+        [row24-star] "season24" auto [row24-end]
+        [row25-star] "season25" auto [row25-end]
+        [row26-star] "season26" auto [row26-end]
+        [row27-star] "season27" auto [row27-end]
+        [row28-star] "season28" auto [row28-end]
+        [row29-star] "season29" auto [row29-end]
+        [row30-star] "season30" auto [row30-end]
+        [row31-star] "season31" auto [row31-end]
         /auto;
     justify-items: center;
     align-items: space-around;
@@ -149,6 +185,38 @@ body {
 .container .body div img {
     width: 125%;
 } 
+
+/* tablet */
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .container .body {
+        grid-template: 
+            [row1-star] "season1 season2 season3" auto [row1-end]
+            [row2-star] "season4 season5 season6" auto [row2-end]
+            [row3-star] "season7 season8 season9" auto [row3-end]
+            [row4-star] "season10 season11 season12" auto [row4-end]
+            [row5-star] "season13 season14 season15" auto [row5-end]
+            [row6-star] "season16 season17 season18" auto [row6-end]
+            [row7-star] "season19 season20 season21" auto [row7-end]
+            [row8-star] "season22 season23 season24" auto [row8-end]
+            [row9-star] "season25 season26 season27" auto [row9-end]
+            [row10-star] "season28 season29 season30" auto [row10-end]
+            [row11-star] "season31 . ." auto [row11-end]
+            /auto auto auto;
+        justify-content: space-around;
+        align-items: space-around;
+
+        margin: 20px;
+    }
+
+    .container .body div {
+        margin: 0 5px;
+    }
+
+    .container .body div img {
+        width: 150%;
+    } 
+}
 
 /* footer */
 
