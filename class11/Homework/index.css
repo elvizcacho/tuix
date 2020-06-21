@@ -57,7 +57,7 @@ body {
 .container .menu-container div {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     font-size: 20px;
     font-weight: 200;
 }
@@ -128,6 +128,10 @@ body {
     .container .menu-container .menu div {
         background-color: transparent;
         width: fit-content;
+    }
+
+    .container .menu-container .menu .home {
+        border-bottom: 3px solid rgb(255, 196, 0);
     }
 }
 
@@ -200,11 +204,10 @@ body {
     height: 50px;
     padding: 10px;
     border-radius: 4px;
-    border: solid 2px rgb(168, 168, 168, .8);
-}
-
-.container .body .search-container .finder form input::placeholder {
-    font-size: 18px;
+    border: solid 2px rgba(100, 100, 100, 0.8);
+    color: rgb(197, 197, 197);
+    font-family: 'Raleway',sans-serif;
+    font-size: 22px;
     font-weight: 200;
 }
 
@@ -259,18 +262,18 @@ body {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container .body {
         grid-template: 
-            [search-star] "search search search" 190px [search-end]
-            [row1-star] "season1 season2 season3" 190px [row1-end]
-            [row2-star] "season4 season5 season6" 190px [row2-end]
-            [row3-star] "season7 season8 season9" 190px [row3-end]
-            [row4-star] "season10 season11 season12" 190px [row4-end]
-            [row5-star] "season13 season14 season15" 190px [row5-end]
-            [row6-star] "season16 season17 season18" 190px [row6-end]
-            [row7-star] "season19 season20 season21" 190px [row7-end]
-            [row8-star] "season22 season23 season24" 190px [row8-end]
-            [row9-star] "season25 season26 season27" 190px [row9-end]
-            [row10-star] "season28 season29 season30" 190px [row10-end]
-            [row11-star] "season31 . ." 190px [row11-end]
+            [search-star] "search search search" auto [search-end]
+            [row1-star] "season1 season2 season3" auto [row1-end]
+            [row2-star] "season4 season5 season6" auto [row2-end]
+            [row3-star] "season7 season8 season9" auto [row3-end]
+            [row4-star] "season10 season11 season12" auto [row4-end]
+            [row5-star] "season13 season14 season15" auto [row5-end]
+            [row6-star] "season16 season17 season18" auto [row6-end]
+            [row7-star] "season19 season20 season21" auto [row7-end]
+            [row8-star] "season22 season23 season24" auto [row8-end]
+            [row9-star] "season25 season26 season27" auto [row9-end]
+            [row10-star] "season28 season29 season30" auto [row10-end]
+            [row11-star] "season31 . ." auto [row11-end]
             /auto auto auto;
         justify-content: space-around;
         align-items: space-around;
@@ -295,23 +298,24 @@ body {
 @media screen and (min-width: 1025px) {
     .container .body {
         grid-template: 
-            [search-star] "search search search" 190px [search-end]
-            [row1-star] "season1 season2 season3" 190px [row1-end]
-            [row2-star] "season4 season5 season6" 190px [row2-end]
-            [row3-star] "season7 season8 season9" 190px [row3-end]
-            [row4-star] "season10 season11 season12" 190px [row4-end]
-            [row5-star] "season13 season14 season15" 190px [row5-end]
-            [row6-star] "season16 season17 season18" 190px [row6-end]
-            [row7-star] "season19 season20 season21" 190px [row7-end]
-            [row8-star] "season22 season23 season24" 190px [row8-end]
-            [row9-star] "season25 season26 season27" 190px [row9-end]
-            [row10-star] "season28 season29 season30" 190px [row10-end]
-            [row11-star] "season31 . ." 190px [row11-end]
+            [search-star] "search search search" auto [search-end]
+            [row1-star] "season1 season2 season3" auto [row1-end]
+            [row2-star] "season4 season5 season6" auto [row2-end]
+            [row3-star] "season7 season8 season9" auto [row3-end]
+            [row4-star] "season10 season11 season12" auto [row4-end]
+            [row5-star] "season13 season14 season15" auto [row5-end]
+            [row6-star] "season16 season17 season18" auto [row6-end]
+            [row7-star] "season19 season20 season21" auto [row7-end]
+            [row8-star] "season22 season23 season24" auto [row8-end]
+            [row9-star] "season25 season26 season27" auto [row9-end]
+            [row10-star] "season28 season29 season30" auto [row10-end]
+            [row11-star] "season31 . ." auto [row11-end]
             /auto auto auto;
         justify-content: space-around;
         align-items: space-around;
 
         margin: 20px;
+        max-width: 1440px;
     }
 
     .container .body .search-container {
@@ -319,17 +323,8 @@ body {
         display: flex;
     }
 
-    .container .body > div {
-        margin: 0 5px;
-    }
-
     .container .body > div img {
         width: 100%;
-    }
-
-    .container .body {
-        max-width: 1440px;
-        margin: 0 auto;
     }
 }
 
