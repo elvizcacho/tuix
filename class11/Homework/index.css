@@ -154,6 +154,11 @@ body {
 .container .body .search-container {
     display: none;
     flex-direction: column;
+
+    animation-name: swipe-up-search-container;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
 
 .container .body .search-container > div {
@@ -168,6 +173,10 @@ body {
     font-size: 18px;
     font-weight: 100;
     letter-spacing: 5px;
+}
+
+.container .body .search-container .finder {
+    position: relative;
 }
 
 .container .body .search-container .finder form {
@@ -188,6 +197,15 @@ body {
     font-weight: 200;
 }
 
+.container .body .search-container .finder form i {
+    position: absolute;
+    top: 18px;
+    right: 35px;
+    font-size: 22px;
+    color: rgb(197, 197, 197);
+    cursor: pointer;
+}
+
 .container .body .search-container .scroll-down {
     color: rgb(255, 255, 255);
     font-size: 24px;
@@ -195,6 +213,16 @@ body {
     animation-name: scroll-down;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
+}
+
+@keyframes swipe-up-search-container {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes scroll-down {
@@ -212,6 +240,8 @@ body {
 @media screen and (min-width: 769px) {
     .container .body .search-container {
         display: flex;
+
+        animation-play-state: running;
     }
 }
     /* end-search-container */
