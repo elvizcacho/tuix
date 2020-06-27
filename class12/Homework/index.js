@@ -1,13 +1,56 @@
 
-function one(a) {
-    const a = addition(num1)
 
-    return a + 0
+function addition(num1,num2){
+    
+    return num1 + num2
+}
+
+function subtraction(num1,num2){
+    
+    return num1 - num2
+}
+
+function multiplication(num1,num2){
+    
+    return num1 * num2
+}
+
+function division(num1,num2){
+    
+    return num1 / num2
 }
 
 
-function addition(num1, num2, fn) {    
-    return num1 + num2 - fn()
+
+
+function calculator(num1,num2,fn) {
+
+    return fn(num1,num2)
 }
 
-console.log(addition(2, 3, one))
+console.log(calculator(2,3,division))
+
+
+
+
+/* 
+function addition(){
+      a=Number;  
+      b=Number; 
+      c=a+b;
+    }
+
+--------------------------
+
+function addition(a,b){  
+  
+    return a + b
+  }
+  
+  function calculator(a,b,fn) {
+      
+    return addition(a,b)
+  }
+  
+  console.log(calculator(2,3,addition))
+*/
