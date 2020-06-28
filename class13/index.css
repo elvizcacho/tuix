@@ -1,0 +1,36 @@
+
+.container {
+    margin: 20px
+}
+
+.button {
+    margin: 20px;
+    margin-left: 0;
+}
+
+.containerSquare {
+    position: relative;
+}
+
+.containerSquare .mega-square-1 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: #00aeef;
+    margin: 20px;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+}
+
+.red {
+    background-color: #F00;
+}
+
+.blue {
+    background-color: #000990;
+}
+
+.green {
+    background-color: #008d10;
+}
