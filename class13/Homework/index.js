@@ -20,7 +20,7 @@ const bigSize = document.getElementById('big-btn')
 /* Direction */
 
 let verticalSteps = 0
-let horizontalSteps = 50
+let horizontalSteps = 0
 
 const onClickUpButton = function() {
    verticalSteps = verticalSteps + 10
@@ -28,30 +28,30 @@ const onClickUpButton = function() {
    megaSquare.style.bottom = newTopValue
 }
 
-/* const mouseDownUpButton = function() {
+const mouseDownUpButton = function() {
     upButton.style.boxShadow = 'none'
 }
 
 const mouseUpUpButton = function() {
     upButton.style.boxShadow = '2px 2px 4px 0px rgba(0, 0, 0, .4)'
-} */
+}
 
 const onClickDownButton = function() {
     verticalSteps = verticalSteps - 10
     const newDownValue = verticalSteps + 'px'
-    megaSquare.style.bottom = newDownValue 
+    megaSquare.style.bottom = newDownValue
 }
 
 const onClickLeftButton = function() {
-    horizontalSteps = horizontalSteps - 1
-    const newLeftValue = horizontalSteps + '%'
-    megaSquare.style.left = newLeftValue 
+    horizontalSteps = horizontalSteps - 10
+    const newLeftValue = 'calc(50% + '  + horizontalSteps + 'px)'
+    megaSquare.style.left = newLeftValue
 }
 
 const onClickRightButton = function() {
-    horizontalSteps = horizontalSteps + 1
-    const newLeftValue = horizontalSteps + '%'
-    megaSquare.style.left = newLeftValue 
+    horizontalSteps = horizontalSteps + 10
+    const newLeftValue = 'calc(50% + '  + horizontalSteps + 'px)'
+    megaSquare.style.left = newLeftValue
 }
 
 
@@ -95,8 +95,8 @@ const onClickBigButton = function () {
 
 
 upButton.addEventListener('click', onClickUpButton)
-/* upButton.addEventListener('mousedown', mouseDownUpButton) //No shadow
-upButton.addEventListener('mouseup', mouseDownUpButton) */
+upButton.addEventListener('mousedown', mouseDownUpButton) //No shadow
+upButton.addEventListener('mouseup', mouseUpUpButton)
 downButton.addEventListener('click', onClickDownButton)
 leftButton.addEventListener('click', onClickLeftButton)
 rightButton.addEventListener('click', onClickRightButton)
