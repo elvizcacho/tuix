@@ -1,6 +1,5 @@
 
 /* shadows */
-
 const mouseDownUpButton = function() {
     upButton.style.boxShadow = 'none'
     downButton.style.boxShadow = 'none'
@@ -93,19 +92,19 @@ const onClickUpButton2 = function() {
     const newTopValue = verticalSteps + 'px'
     megaSquare2.style.top = newTopValue
  }
- 
+
 const onClickDownButton2 = function() {
     verticalSteps += 10
     const newDownValue = verticalSteps + 'px'
     megaSquare2.style.top = newDownValue
  }
- 
+
 const onClickLeftButton2 = function() {
     horizontalSteps += 10
     const newLeftValue = horizontalSteps + 'px'
     megaSquare2.style.right = newLeftValue
  }
- 
+
 const onClickRightButton2 = function() {
     horizontalSteps -= 10
     const newLeftValue = horizontalSteps + 'px'
@@ -190,9 +189,9 @@ const onClickBigButton2 = function () {
 
 /* Lines */
 
-const line1 = function () {
+/*const line1 = function () {
 
-}
+}*/
 
 //---------------------
 

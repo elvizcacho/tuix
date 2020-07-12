@@ -1,0 +1,64 @@
+
+.container {
+    margin: 20px;
+    position: relative;
+}
+
+.button {
+    margin: 20px;
+    margin-left: 0;
+}
+
+.containerSquare {
+    position: relative;
+}
+
+@keyframes party {
+    0% {
+        background-color: #000099;
+    }
+
+    50% {
+        background-color: #008d10;
+    }
+
+    100% {
+        background-color: #caff00;
+    }
+}
+
+.containerSquare .mega-square-1 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: #00aeef;
+    margin: 20px;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line1 {
+    height: 100vh;
+    width: 10px;
+    background-color: #000;
+    position: absolute;
+    left: 450px;
+    z-index: 1;
+}
+
+.line2 {
+    height: 100vh;
+    width: 10px;
+    background-color: #000;
+    position: absolute;
+    left: 650px;
+    z-index: 1;
+}
+
