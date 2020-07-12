@@ -1,0 +1,116 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <title>Moving Mega-square</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- Player 1 -->
+            <div class="controls-container1">
+                <div class="direction-container">
+                    <span>Direction</span>
+                    <div class="arrows-container-left">
+                        <div id="left-btn">
+                            <i class="fas fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="arrows-container-up-down">
+                        <div id="up-btn">
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                        <div id="down-btn">
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="arrows-container-right">
+                        <div id="right-btn">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="palette-colors-container">
+                    <span>Select color</span>
+                    <div class="top-colors-container">
+                        <div id="blue-btn" class="blue"></div>
+                        <div id="red-btn" class="red"></div>
+                    </div>
+                    <div class="bottom-colors-container">
+                        <div id="yellow-btn" class="yellow"></div>
+                        <div id="green-btn" class="green"></div>
+                    </div>
+                </div>
+                <div class="size-container">
+                    <span>Size</span>
+                    <div id="big-btn" class="big">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div id="small-btn" class="small">
+                        <i class="fas fa-search-minus"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Player 2 -->
+            <div class="controls-container2">
+                <div class="direction-container">
+                    <span>Direction</span>
+                    <div class="arrows-container-left">
+                        <div id="left-btn2">
+                            <i class="fas fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="arrows-container-up-down">
+                        <div id="up-btn2">
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                        <div id="down-btn2">
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="arrows-container-right">
+                        <div id="right-btn2">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="palette-colors-container">
+                    <span>Select color</span>
+                    <div class="top-colors-container">
+                        <div id="blue-btn2" class="blue"></div>
+                        <div id="red-btn2" class="red"></div>
+                    </div>
+                    <div class="bottom-colors-container">
+                        <div id="yellow-btn2" class="yellow"></div>
+                        <div id="green-btn2" class="green"></div>
+                    </div>
+                </div>
+                <div class="size-container">
+                    <span>Size</span>
+                    <div id="big-btn2" class="big">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div id="small-btn2" class="small">
+                        <i class="fas fa-search-minus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maze -->
+            <div class="maze-container">
+                <div id="mega-square-1" class="mega-square-1"></div>
+                <div id="mega-square-2" class="mega-square-2"></div>
+
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+            </div>
+        </div> 
+    </body>
+    <script src="index.js"></script>
+</html>

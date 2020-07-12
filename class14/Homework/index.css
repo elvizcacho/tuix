@@ -1,0 +1,241 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 18% 64% 18%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        "player1 maze player2";
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+
+.container div[class*="controls-container"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.container .controls-container1 {
+    grid-area: player1;
+}
+
+.container .controls-container2 {
+    grid-area: player2;   
+}
+
+.container div[class*="controls-container"] > div {
+    display: flex;
+
+    position: relative;
+    width: 100%;
+    height: 33%;
+    background-color: rgb(235, 235, 235);
+}
+
+.container div[class*="controls-container"] > div span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    font-size: 12px;
+    color: rgb(170, 170, 170);
+}
+
+
+/* Direction */
+
+.container div[class*="controls-container"] .direction-container {
+    justify-content: center;
+}
+
+.container div[class*="controls-container"] .direction-container div[class*="arrows-container"] {
+    display: flex;
+    align-items: center;
+}
+
+.container div[class*="controls-container"] .direction-container .arrows-container-left {
+    display: flex;
+    justify-content: right;
+}
+
+.container div[class*="controls-container"] .direction-container .arrows-container-up-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container div[class*="controls-container"] .direction-container .arrows-container-right {
+    display: flex;
+    justify-content: left;
+}
+
+.container div[class*="controls-container"] .direction-container div[class*="arrows-container"] > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(197, 197, 197);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .4);
+    color: rgb(0, 0, 0);
+    font-size: 34px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.container div[class*="controls-container"] .direction-container div[class*="arrows-container"] > div:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+
+/* Palette Color */
+
+.container div[class*="controls-container"] .palette-colors-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.container div[class*="controls-container"] .palette-colors-container div[class*="colors-container"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div[class*="controls-container"] .palette-colors-container div[class*="colors-container"] > div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 100%;
+    border: solid 1px rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+.container div[class*="controls-container"] .palette-colors-container div[class*="colors-container"] > div:hover {
+    border: solid 2px rgb(161, 161, 161);
+}
+
+.container div[class*="controls-container"] .palette-colors-container .top-colors-container .blue {
+    background-color: #577590;
+}
+
+.container div[class*="controls-container"] .palette-colors-container .top-colors-container .red {
+    background-color: #f94144;
+}
+
+.container div[class*="controls-container"] .palette-colors-container .bottom-colors-container .yellow {
+    background-color: #f9c74f;
+}
+
+.container div[class*="controls-container"] .palette-colors-container .bottom-colors-container .green {
+    background-color: #90be6d;
+}
+
+
+/* Size */
+
+.container div[class*="controls-container"] .size-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div[class*="controls-container"] .size-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 60px;
+    border-radius: 4px;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.container div[class*="controls-container"] .size-container > div:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* Maze */
+
+.container .maze-container {
+    grid-area: maze;
+    display: flex;
+
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.container .maze-container div[class*="mega-square"] {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #577590;
+}
+
+.container .maze-container .mega-square-1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transition: all .5s;
+}
+
+.container .maze-container .mega-square-2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all .5s;
+}
+
+.container .maze-container .line1 {
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+
+    width: 5px;
+    height: 65vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.container .maze-container .line2 {
+    position: absolute;
+    top: 60vh;
+    left: 20vw;
+    
+    width: 450px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+.container .maze-container .line3 {
+    position: absolute;
+    bottom: 0;
+    left: 40vw;
+
+    width: 5px;
+    height: 15vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.container .maze-container .line4 {
+    position: absolute;
+    top: 0;
+    left: 40vw;
+
+    width: 5px;
+    height: 35vh;
+    background-color: rgb(0, 0, 0);
+}
