@@ -56,30 +56,30 @@ const line4 = document.getElementById('line4')
 
 /* Direction */
 
+// Player 1
+
 let verticalSteps = 10
 let horizontalSteps = 10
 
-// Player 1
-
-const onClickUpButton = function() {
-   verticalSteps += 10
-   const newTopValue = verticalSteps + 'px'
-   megaSquare1.style.bottom = newTopValue
+const moveMegaSquareUp = function() {
+    verticalSteps += 10
+    const newBottomValue = verticalSteps + 'px'
+    megaSquare1.style.bottom = newBottomValue
 }
 
-const onClickDownButton = function() {
+const moveMegaSquareDown = function() {
     verticalSteps -= 10
-    const newDownValue = verticalSteps + 'px'
-    megaSquare1.style.bottom = newDownValue
+    const newBottomValue = verticalSteps + 'px'
+    megaSquare1.style.bottom = newBottomValue
 }
 
-const onClickLeftButton = function() {
+const moveMegaSquareLeft = function() {
     horizontalSteps -= 10
     const newLeftValue = horizontalSteps + 'px'
     megaSquare1.style.left = newLeftValue
 }
 
-const onClickRightButton = function() {
+const moveMegaSquareRight = function() {
     horizontalSteps += 10
     const newLeftValue = horizontalSteps + 'px'
     megaSquare1.style.left = newLeftValue
@@ -87,28 +87,31 @@ const onClickRightButton = function() {
 
 // Player 2
 
-const onClickUpButton2 = function() {
-    verticalSteps -= 10
-    const newTopValue = verticalSteps + 'px'
+let verticalSteps2 = 10
+let horizontalSteps2 = 10
+
+const moveMegaSquareUp2 = function() {
+    verticalSteps2 -= 10
+    const newTopValue = verticalSteps2 + 'px'
     megaSquare2.style.top = newTopValue
  }
 
-const onClickDownButton2 = function() {
-    verticalSteps += 10
-    const newDownValue = verticalSteps + 'px'
-    megaSquare2.style.top = newDownValue
+const moveMegaSquareDown2 = function() {
+    verticalSteps2 += 10
+    const newTopValue = verticalSteps2 + 'px'
+    megaSquare2.style.top = newTopValue
  }
 
-const onClickLeftButton2 = function() {
-    horizontalSteps += 10
-    const newLeftValue = horizontalSteps + 'px'
-    megaSquare2.style.right = newLeftValue
+const moveMegaSquareLeft2 = function() {
+    horizontalSteps2 += 10
+    const newRightValue = horizontalSteps2 + 'px'
+    megaSquare2.style.right = newRightValue
  }
 
-const onClickRightButton2 = function() {
-    horizontalSteps -= 10
-    const newLeftValue = horizontalSteps + 'px'
-    megaSquare2.style.right = newLeftValue
+const moveMegaSquareRight2 = function() {
+    horizontalSteps2 -= 10
+    const newRightValue = horizontalSteps2 + 'px'
+    megaSquare2.style.right = newRightValue
  }
 
 
@@ -189,20 +192,70 @@ const onClickBigButton2 = function () {
 
 /* Lines */
 
-/*const line1 = function () {
+const line1LeftSide = 285
+line1.style.left = line1LeftSide + 'px'
 
-}*/
+const blockLine1 = function () {
+    let megaSquare1RightSide = horizontalSteps + size
+    let megaSquare1LeftSide = horizontalSteps
+
+    if (megaSquare1RightSide > line1LeftSide) {
+        megaSquare1.style.left = line1LeftSide - size + 'px'
+    } 
+    if (megaSquare1LeftSide < 0) {
+        megaSquare1.style.left = 0 + 'px'
+    }
+}
+
+/* Keyboard control */
+
+const onKeyPress = function(event) {
+    switch (event.key) {
+        case "a":
+            moveMegaSquareLeft()
+            blockLine1()
+            break
+        case "d":
+            moveMegaSquareRight()
+            blockLine1()
+            break
+        case "w":
+            moveMegaSquareUp()
+            break
+        case "s":
+            moveMegaSquareDown()
+            break
+        case "ArrowUp":
+            moveMegaSquareUp2()
+            break
+        case "ArrowDown":
+            moveMegaSquareDown2()
+            break
+        case "ArrowLeft":
+            moveMegaSquareLeft2()
+            break
+        case "ArrowRight":
+            moveMegaSquareRight2()
+            break
+        default:
+            alert("This key is not supported, please use a, d, left arrow or right arrow.")
+            break
+    }
+}
+
 
 //---------------------
 
+document.addEventListener('keydown', onKeyPress)
 
 // Player 1
-upButton.addEventListener('click', onClickUpButton)
+upButton.addEventListener('click', moveMegaSquareUp)
 upButton.addEventListener('mousedown', mouseDownUpButton) //No shadow
 upButton.addEventListener('mouseup', mouseUpUpButton)
-downButton.addEventListener('click', onClickDownButton)
-leftButton.addEventListener('click', onClickLeftButton)
-rightButton.addEventListener('click', onClickRightButton)
+downButton.addEventListener('click', moveMegaSquareDown)
+leftButton.addEventListener('click', moveMegaSquareLeft)
+rightButton.addEventListener('click', moveMegaSquareRight)
+rightButton.addEventListener('click', blockLine1)
 
 blueColor.addEventListener('click', onClickBlueColor)
 redColor.addEventListener('click', onClickRedColor)
@@ -213,10 +266,10 @@ smallSize.addEventListener('click', onClickSmallButton)
 bigSize.addEventListener('click', onClickBigButton)
 
 // Player 2
-upButton2.addEventListener('click', onClickUpButton2)
-downButton2.addEventListener('click', onClickDownButton2)
-leftButton2.addEventListener('click', onClickLeftButton2)
-rightButton2.addEventListener('click', onClickRightButton2)
+upButton2.addEventListener('click', moveMegaSquareUp2)
+downButton2.addEventListener('click', moveMegaSquareDown2)
+leftButton2.addEventListener('click', moveMegaSquareLeft2)
+rightButton2.addEventListener('click', moveMegaSquareRight2)
 
 blueColor2.addEventListener('click', onClickBlueColor2)
 redColor2.addEventListener('click', onClickRedColor2)

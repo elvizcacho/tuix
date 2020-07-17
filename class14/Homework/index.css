@@ -177,6 +177,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    border: 2px solid rgb(200, 200, 200);
 }
 
 .container .maze-container div[class*="mega-square"] {
@@ -203,7 +204,7 @@
 .container .maze-container .line1 {
     position: absolute;
     bottom: 0;
-    left: 20vw;
+    left: 285px;
 
     width: 5px;
     height: 65vh;
@@ -213,7 +214,7 @@
 .container .maze-container .line2 {
     position: absolute;
     top: 60vh;
-    left: 20vw;
+    left: 285px;
     
     width: 450px;
     height: 5px;
