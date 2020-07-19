@@ -192,18 +192,47 @@ const onClickBigButton2 = function () {
 
 /* Lines */
 
-const line1LeftSide = 285
-line1.style.left = line1LeftSide + 'px'
+const topLimit = 710
+const rightLimit = 897.3
+const bottomLimit = topLimit
+const leftLimit = rightLimit
 
-const blockLine1 = function () {
+const line1LeftSide = 288
+const line1RightSide = line1LeftSide + 5
+const line1TopSide = 475.5
+
+
+const horizontalBlock = function () {
     let megaSquare1RightSide = horizontalSteps + size
     let megaSquare1LeftSide = horizontalSteps
+    /* let megaSquare1TopSide = verticalSteps + size */
+    let megaSquare1LowerSide = verticalSteps
 
-    if (megaSquare1RightSide > line1LeftSide) {
+    if (megaSquare1RightSide >= line1LeftSide && megaSquare1LowerSide <= line1TopSide) {
         megaSquare1.style.left = line1LeftSide - size + 'px'
-    } 
-    if (megaSquare1LeftSide < 0) {
+    }
+    if (megaSquare1LeftSide <= 0) {
         megaSquare1.style.left = 0 + 'px'
+    }
+    if (megaSquare1RightSide >= rightLimit) {
+        megaSquare1.style.left = rightLimit - size + 'px'
+    }
+}
+
+const verticalBlock = function() {
+    let megaSquare1RightSide = horizontalSteps + size
+    let megaSquare1LeftSide = horizontalSteps
+    let megaSquare1TopSide = verticalSteps + size
+    let megaSquare1LowerSide = verticalSteps
+    
+    if (megaSquare1TopSide >= topLimit) {
+        megaSquare1.style.bottom = topLimit - size + 'px'
+    }
+    if (megaSquare1LowerSide <= 0) {
+        megaSquare1.style.bottom = 0 + 'px'
+    }
+    if (megaSquare1LowerSide <= line1TopSide && megaSquare1LeftSide <= line1RightSide && megaSquare1RightSide >= line1LeftSide) {
+        megaSquare1.style.bottom >= line1TopSide + 'px'
     }
 }
 
@@ -213,17 +242,19 @@ const onKeyPress = function(event) {
     switch (event.key) {
         case "a":
             moveMegaSquareLeft()
-            blockLine1()
+            horizontalBlock()
             break
         case "d":
             moveMegaSquareRight()
-            blockLine1()
+            horizontalBlock()
             break
         case "w":
             moveMegaSquareUp()
+            verticalBlock()
             break
         case "s":
             moveMegaSquareDown()
+            verticalBlock()
             break
         case "ArrowUp":
             moveMegaSquareUp2()
@@ -250,12 +281,15 @@ document.addEventListener('keydown', onKeyPress)
 
 // Player 1
 upButton.addEventListener('click', moveMegaSquareUp)
+upButton.addEventListener('click', verticalBlock)
 upButton.addEventListener('mousedown', mouseDownUpButton) //No shadow
 upButton.addEventListener('mouseup', mouseUpUpButton)
 downButton.addEventListener('click', moveMegaSquareDown)
+downButton.addEventListener('click', verticalBlock)
 leftButton.addEventListener('click', moveMegaSquareLeft)
+leftButton.addEventListener('click', horizontalBlock)
 rightButton.addEventListener('click', moveMegaSquareRight)
-rightButton.addEventListener('click', blockLine1)
+rightButton.addEventListener('click', horizontalBlock)
 
 blueColor.addEventListener('click', onClickBlueColor)
 redColor.addEventListener('click', onClickRedColor)
