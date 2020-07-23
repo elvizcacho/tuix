@@ -61,28 +61,44 @@ const line4 = document.getElementById('line4')
 let verticalSteps = 10
 let horizontalSteps = 10
 
+let isMegaSquareMovingUp = true
+
 const moveMegaSquareUp = function() {
-    verticalSteps += 10
-    const newBottomValue = verticalSteps + 'px'
-    megaSquare1.style.bottom = newBottomValue
+    if (isMegaSquareMovingUp) {
+        verticalSteps += 10
+        const newBottomValue = verticalSteps + 'px'
+        megaSquare1.style.bottom = newBottomValue
+    }
 }
+
+let isMegaSquareMovingDown = true
 
 const moveMegaSquareDown = function() {
-    verticalSteps -= 10
-    const newBottomValue = verticalSteps + 'px'
-    megaSquare1.style.bottom = newBottomValue
+    if (isMegaSquareMovingDown) {
+        verticalSteps -= 10
+        const newBottomValue = verticalSteps + 'px'
+        megaSquare1.style.bottom = newBottomValue
+    }
 }
+
+let isMegaSquareMovingLeft = true
 
 const moveMegaSquareLeft = function() {
-    horizontalSteps -= 10
-    const newLeftValue = horizontalSteps + 'px'
-    megaSquare1.style.left = newLeftValue
+    if (isMegaSquareMovingLeft) {
+        horizontalSteps -= 10
+        const newLeftValue = horizontalSteps + 'px'
+        megaSquare1.style.left = newLeftValue
+    }
 }
 
+let isMegaSquareMovingRight = true
+
 const moveMegaSquareRight = function() {
-    horizontalSteps += 10
-    const newLeftValue = horizontalSteps + 'px'
-    megaSquare1.style.left = newLeftValue
+    if (isMegaSquareMovingRight) {
+        horizontalSteps += 10
+        const newLeftValue = horizontalSteps + 'px'
+        megaSquare1.style.left = newLeftValue
+    }
 }
 
 // Player 2
@@ -190,49 +206,158 @@ const onClickBigButton2 = function () {
     megaSquare2.style.height = newSizeValue
 }
 
-/* Lines */
+/* Lines and limits */
 
-const topLimit = 710
-const rightLimit = 897.3
-const bottomLimit = topLimit
-const leftLimit = rightLimit
+// Player 1
+const topLimitP1 = 710
+const rightLimitP1 = 897.3
+const bottomLimitP1 = 0
+const leftLimitP1 = 0
 
+// Player 2
+const topLimitP2 = 0
+const rightLimitP2 = 0
+const bottomLimitP2 = 710
+const leftLimitP2 = 897.3
+
+// Line 1
 const line1LeftSide = 288
 const line1RightSide = line1LeftSide + 5
-const line1TopSide = 475.5
+const line1TopSide = 474
+
+// Line 2
+const line2LeftSide = 288
+const line2RightSide = 638
+const line2TopSide = 438
+const line2LowerSide = line2TopSide + 5
+
+// Line 3
+const line3LeftSide = 576
+const line3RightSide = line3LeftSide + 5
+const line3TopSide = 109
+
+// Line 4
+const line4LeftSide = 576
+const line4RightSide = line4LeftSide + 5
+const line4LowerSide = 255
 
 
-const horizontalBlock = function () {
+
+const line1Block = function () {
     let megaSquare1RightSide = horizontalSteps + size
     let megaSquare1LeftSide = horizontalSteps
-    /* let megaSquare1TopSide = verticalSteps + size */
     let megaSquare1LowerSide = verticalSteps
 
-    if (megaSquare1RightSide >= line1LeftSide && megaSquare1LowerSide <= line1TopSide) {
-        megaSquare1.style.left = line1LeftSide - size + 'px'
+    //console.log(megaSquare1RightSide, line1LeftSide)
+
+    if (megaSquare1RightSide > line1LeftSide && megaSquare1RightSide < line1RightSide) {
+        isMegaSquareMovingRight = false
+        mazeRightBorder = false
+
+        console.log('Line1 right block')
+    } else {
+        isMegaSquareMovingRight = true
+        mazeRightBorder = true
     }
-    if (megaSquare1LeftSide <= 0) {
-        megaSquare1.style.left = 0 + 'px'
+
+    if ((megaSquare1LowerSide < line1TopSide && megaSquare1LowerSide > bottomLimitP1) && (megaSquare1RightSide > line1RightSide && megaSquare1LeftSide < line1LeftSide)) {
+        isMegaSquareMovingDown = false
+        mazeBottomBorder = false
+
+        console.log('Line1 down block')
+    } else {
+        isMegaSquareMovingDown = true
+        mazeBottomBorder = true
     }
-    if (megaSquare1RightSide >= rightLimit) {
-        megaSquare1.style.left = rightLimit - size + 'px'
+
+    if (megaSquare1LeftSide < line1RightSide && megaSquare1LeftSide > line1LeftSide) {
+        isMegaSquareMovingLeft = false
+        mazeLeftBorder = false
+
+        console.log('Line1 left block')
+    } else {
+        isMegaSquareMovingLeft = true
+        mazeLeftBorder = true
+    } 
+}
+
+
+
+
+
+let mazeRightBorder = true
+
+const rightLimitBlock = function () {
+
+    if (mazeRightBorder) {
+        let megaSquare1RightSide = horizontalSteps + size
+
+        //console.log(megaSquareRightside, rightLimitP1)
+        
+        if (megaSquare1RightSide >= rightLimitP1) {
+            isMegaSquareMovingRight = false
+
+            console.log('right limit')
+        } else {
+            isMegaSquareMovingRight = true
+        }
     }
 }
 
-const verticalBlock = function() {
-    let megaSquare1RightSide = horizontalSteps + size
-    let megaSquare1LeftSide = horizontalSteps
-    let megaSquare1TopSide = verticalSteps + size
-    let megaSquare1LowerSide = verticalSteps
-    
-    if (megaSquare1TopSide >= topLimit) {
-        megaSquare1.style.bottom = topLimit - size + 'px'
+let mazeLeftBorder = true
+
+const leftLimitBlock = function () {
+
+    if (mazeLeftBorder) {
+        let megaSquare1LeftSide = horizontalSteps
+        
+        //console.log(megaSquare1LeftSide, leftLimitP1)
+
+        if (megaSquare1LeftSide <= leftLimitP1) {
+            isMegaSquareMovingLeft = false
+
+            console.log('left limit')
+        } else {
+            isMegaSquareMovingLeft = true
+        }
     }
-    if (megaSquare1LowerSide <= 0) {
-        megaSquare1.style.bottom = 0 + 'px'
+}
+
+let mazeBottomBorder = true
+
+const bottomLimitBlock = function() {
+
+    if (mazeBottomBorder) {
+        let megaSquare1LowerSide = verticalSteps
+        
+        //console.log (megaSquare1LowerSide, bottomLimitP1)
+
+        if (megaSquare1LowerSide <= bottomLimitP1) {
+            isMegaSquareMovingDown = false
+
+            console.log('bottom limit')
+        } else {
+            isMegaSquareMovingDown = true
+        }
     }
-    if (megaSquare1LowerSide <= line1TopSide && megaSquare1LeftSide <= line1RightSide && megaSquare1RightSide >= line1LeftSide) {
-        megaSquare1.style.bottom >= line1TopSide + 'px'
+}
+
+let mazeTopBorder = true
+
+const topLimitBlock = function() {
+
+    if (mazeTopBorder) {
+        let megaSquare1TopSide = verticalSteps + size
+        
+        //console.log (megaSquare1TopSide, topLimitP1)
+
+        if (megaSquare1TopSide >= topLimitP1) {
+            isMegaSquareMovingUp = false
+
+            console.log('Top limit')
+        } else {
+            isMegaSquareMovingUp = true
+        }
     }
 }
 
@@ -242,19 +367,24 @@ const onKeyPress = function(event) {
     switch (event.key) {
         case "a":
             moveMegaSquareLeft()
-            horizontalBlock()
+            line1Block()
+            leftLimitBlock()
             break
         case "d":
             moveMegaSquareRight()
-            horizontalBlock()
+            line1Block()
+            rightLimitBlock()
             break
         case "w":
             moveMegaSquareUp()
-            verticalBlock()
+            line1Block()
+            topLimitBlock()
             break
         case "s":
             moveMegaSquareDown()
-            verticalBlock()
+            //line1DownBlock()
+            line1Block()
+            bottomLimitBlock()
             break
         case "ArrowUp":
             moveMegaSquareUp2()
@@ -281,15 +411,19 @@ document.addEventListener('keydown', onKeyPress)
 
 // Player 1
 upButton.addEventListener('click', moveMegaSquareUp)
-upButton.addEventListener('click', verticalBlock)
+upButton.addEventListener('click', topLimitBlock)
+upButton.addEventListener('click', line1Block)
 upButton.addEventListener('mousedown', mouseDownUpButton) //No shadow
 upButton.addEventListener('mouseup', mouseUpUpButton)
 downButton.addEventListener('click', moveMegaSquareDown)
-downButton.addEventListener('click', verticalBlock)
+downButton.addEventListener('click', line1Block)
+downButton.addEventListener('click', bottomLimitBlock)
 leftButton.addEventListener('click', moveMegaSquareLeft)
-leftButton.addEventListener('click', horizontalBlock)
+leftButton.addEventListener('click', leftLimitBlock)
+leftButton.addEventListener('click', line1Block)
 rightButton.addEventListener('click', moveMegaSquareRight)
-rightButton.addEventListener('click', horizontalBlock)
+rightButton.addEventListener('click', line1Block)
+rightButton.addEventListener('click', rightLimitBlock)
 
 blueColor.addEventListener('click', onClickBlueColor)
 redColor.addEventListener('click', onClickRedColor)
