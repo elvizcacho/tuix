@@ -282,7 +282,7 @@ const line1Block = function () {
 
 
 
-const line2Block = function () {
+/*const line2Block = function () {
     let megaSquare1RightSide = horizontalSteps + size
     let megaSquare1LeftSide = horizontalSteps
     let megaSquare1LowerSide = verticalSteps
@@ -297,7 +297,7 @@ const line2Block = function () {
         mazeBottomBorder = true
     }
 
-/*     if (megaSquare1RightSide > line1RightSide && megaSquare1LeftSide < line1LeftSide && megaSquare1LowerSide < line1TopSide) {
+/!*     if (megaSquare1RightSide > line1RightSide && megaSquare1LeftSide < line1LeftSide && megaSquare1LowerSide < line1TopSide) {
         isMegaSquareMovingDown = false
         mazeBottomBorder = false
 
@@ -315,8 +315,8 @@ const line2Block = function () {
     } else {
         isMegaSquareMovingLeft = true
         mazeLeftBorder = true
-    } */
-}
+    } *!/
+}*/
 
 
 
@@ -329,7 +329,7 @@ const rightLimitBlock = function () {
         let megaSquare1RightSide = horizontalSteps + size
 
         //console.log(megaSquareRightside, rightLimitP1)
-        
+
         if (megaSquare1RightSide >= rightLimitP1) {
             isMegaSquareMovingRight = false
 
@@ -346,7 +346,7 @@ const leftLimitBlock = function () {
 
     if (mazeLeftBorder) {
         let megaSquare1LeftSide = horizontalSteps
-        
+
         //console.log(megaSquare1LeftSide, leftLimitP1)
 
         if (megaSquare1LeftSide <= leftLimitP1) {
@@ -365,7 +365,7 @@ const bottomLimitBlock = function() {
 
     if (mazeBottomBorder) {
         let megaSquare1LowerSide = verticalSteps
-        
+
         //console.log (megaSquare1LowerSide, bottomLimitP1)
 
         if (megaSquare1LowerSide <= bottomLimitP1) {
@@ -384,7 +384,7 @@ const topLimitBlock = function() {
 
     if (mazeTopBorder) {
         let megaSquare1TopSide = verticalSteps + size
-        
+
         //console.log (megaSquare1TopSide, topLimitP1)
 
         if (megaSquare1TopSide >= topLimitP1) {
