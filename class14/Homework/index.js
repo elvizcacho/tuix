@@ -248,9 +248,7 @@ const line1Block = function () {
     let megaSquare1LeftSide = horizontalSteps
     let megaSquare1LowerSide = verticalSteps
 
-    //console.log(megaSquare1RightSide, line1LeftSide)
-
-    if (megaSquare1RightSide > line1LeftSide && megaSquare1RightSide < line1RightSide) {
+    if (megaSquare1RightSide > line1LeftSide && megaSquare1RightSide < line1RightSide && megaSquare1LowerSide < line1TopSide) {
         isMegaSquareMovingRight = false
         mazeRightBorder = false
 
@@ -260,7 +258,7 @@ const line1Block = function () {
         mazeRightBorder = true
     }
 
-    if ((megaSquare1LowerSide < line1TopSide && megaSquare1LowerSide > bottomLimitP1) && (megaSquare1RightSide > line1RightSide && megaSquare1LeftSide < line1LeftSide)) {
+    if (megaSquare1RightSide > line1RightSide && megaSquare1LeftSide < line1LeftSide && megaSquare1LowerSide < line1TopSide) {
         isMegaSquareMovingDown = false
         mazeBottomBorder = false
 
@@ -270,7 +268,7 @@ const line1Block = function () {
         mazeBottomBorder = true
     }
 
-    if (megaSquare1LeftSide < line1RightSide && megaSquare1LeftSide > line1LeftSide) {
+    if (megaSquare1LeftSide < line1RightSide && megaSquare1LeftSide > line1LeftSide && megaSquare1LowerSide < line1TopSide) {
         isMegaSquareMovingLeft = false
         mazeLeftBorder = false
 
@@ -278,9 +276,47 @@ const line1Block = function () {
     } else {
         isMegaSquareMovingLeft = true
         mazeLeftBorder = true
-    } 
+    }
 }
 
+
+
+
+const line2Block = function () {
+    let megaSquare1RightSide = horizontalSteps + size
+    let megaSquare1LeftSide = horizontalSteps
+    let megaSquare1LowerSide = verticalSteps
+
+    if (megaSquare1LowerSide < line2TopSide && megaSquare1LowerSide > line2LowerSide && megaSquare1LeftSide < line2RightSide && megaSquare1RightSide > line2LeftSide) {
+        isMegaSquareMovingDown = false
+        mazeBottomBorder = false
+
+        console.log('Line2 down block')
+    } else {
+        isMegaSquareMovingDown = true
+        mazeBottomBorder = true
+    }
+
+/*     if (megaSquare1RightSide > line1RightSide && megaSquare1LeftSide < line1LeftSide && megaSquare1LowerSide < line1TopSide) {
+        isMegaSquareMovingDown = false
+        mazeBottomBorder = false
+
+        console.log('Line1 down block')
+    } else {
+        isMegaSquareMovingDown = true
+        mazeBottomBorder = true
+    }
+
+    if (megaSquare1LeftSide < line1RightSide && megaSquare1LeftSide > line1LeftSide && megaSquare1LowerSide < line1TopSide) {
+        isMegaSquareMovingLeft = false
+        mazeLeftBorder = false
+
+        console.log('Line1 left block')
+    } else {
+        isMegaSquareMovingLeft = true
+        mazeLeftBorder = true
+    } */
+}
 
 
 
@@ -368,22 +404,26 @@ const onKeyPress = function(event) {
         case "a":
             moveMegaSquareLeft()
             line1Block()
+            line2Block()
             leftLimitBlock()
             break
         case "d":
             moveMegaSquareRight()
             line1Block()
+            line2Block()
             rightLimitBlock()
             break
         case "w":
             moveMegaSquareUp()
             line1Block()
+            line2Block()
             topLimitBlock()
             break
         case "s":
             moveMegaSquareDown()
             //line1DownBlock()
             line1Block()
+            line2Block()
             bottomLimitBlock()
             break
         case "ArrowUp":
@@ -413,16 +453,20 @@ document.addEventListener('keydown', onKeyPress)
 upButton.addEventListener('click', moveMegaSquareUp)
 upButton.addEventListener('click', topLimitBlock)
 upButton.addEventListener('click', line1Block)
+upButton.addEventListener('click', line2Block)
 upButton.addEventListener('mousedown', mouseDownUpButton) //No shadow
 upButton.addEventListener('mouseup', mouseUpUpButton)
 downButton.addEventListener('click', moveMegaSquareDown)
 downButton.addEventListener('click', line1Block)
+downButton.addEventListener('click', line2Block)
 downButton.addEventListener('click', bottomLimitBlock)
 leftButton.addEventListener('click', moveMegaSquareLeft)
 leftButton.addEventListener('click', leftLimitBlock)
 leftButton.addEventListener('click', line1Block)
+leftButton.addEventListener('click', line2Block)
 rightButton.addEventListener('click', moveMegaSquareRight)
 rightButton.addEventListener('click', line1Block)
+rightButton.addEventListener('click', line2Block)
 rightButton.addEventListener('click', rightLimitBlock)
 
 blueColor.addEventListener('click', onClickBlueColor)
