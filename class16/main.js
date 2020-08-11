@@ -57,7 +57,7 @@ if (adn.length > 0) {
     if (adn[8] === 'g') { counter.g = counter.g + 1 }
     if (adn[9] === 'g') { counter.g = counter.g + 1 }
 
-    console.log(counter)
+    console.table(counter)
 
 } else {
     console.log("There is no sequence to process")
