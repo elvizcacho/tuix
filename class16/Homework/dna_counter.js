@@ -1,7 +1,7 @@
 
 console.log("------ INIT ------")
 
-const adn = 'cattctacagcgccaatcgctactgagcaggagaccattgtatttctggt'
+const adn = 'AAA'
 const counter = {
     a: 0,
     c: 0,
