@@ -10,7 +10,7 @@ const counter = {
 }
 
 if (adn.length > 0) {
-    console.log("Let's process the sequence with " + adn.length + " proteins")
+    console.log("Let's process the sequence with " + adn.length + " proteins.")
 
     for (let i = 0; i < adn.length; i ++) {
         if (adn[i] === 'a') {
