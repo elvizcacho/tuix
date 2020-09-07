@@ -11,7 +11,7 @@
      
 
 ```
-/*
+/* it works with 10 for now; it has to work for all n
 Exercise 1
 const n = 10
 0000000000
