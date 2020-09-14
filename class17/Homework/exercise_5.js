@@ -1,7 +1,7 @@
 
 console.log('———Intit Exercise 5———')
 
-const n = 5
+const n = 10
 
 
 for (let i = 1; i <= n; i++) {
@@ -12,13 +12,13 @@ for (let i = 1; i <= n; i++) {
         row += ' '
     }
 
-    for (let h = 1; h <= i; h++) {
+    for (let h = 0; h != (2 * i - 1); h++) {
         row += '*'
     }
 
-    for (k = 1; k <= n; k++) {
+    for (k = i + 1; k <= n; k++) {
 
-        row += '*'
+        row += ' '
     }
 
 console.log(row);

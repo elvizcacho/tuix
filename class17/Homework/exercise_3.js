@@ -3,7 +3,7 @@
 
 console.log('———Intit Exercise 3———')
 
-const n = 5
+const n = 3
 let row = ''
 
 for (i = 0; i < n; i++) {

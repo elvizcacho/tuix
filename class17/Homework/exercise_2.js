@@ -1,12 +1,12 @@
 
 console.log('———Intit Exercise 2———')
 
-const n = 10
+const n = 3
 
 for (i = 1; i <= n; i++ ) {
 
     let row = ''
-    for (j = 10; j >= i; j--) {
+    for (j = n; j >= i; j--) {
 
         row += '*'
     }
