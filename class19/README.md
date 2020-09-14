@@ -6,6 +6,7 @@
 
 ### Homework
 - Highlight
+- Add the option to show the wall by pressing enter
 - Create a stopwatch script.
 - Create a digital stopwatch. 
 _ 
