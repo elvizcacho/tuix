@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(50, 50, 50);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    margin: 0 10px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    height: 250px;
+
+    margin: 30px auto;
+
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 50%;
+
+    color: rgb(200, 200, 200);
+    background-color: rgb(40, 40, 40);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+}
