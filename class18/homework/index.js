@@ -35,20 +35,16 @@ const onClick = function () {
     generator(n)
 }
 
-/* const onKeyPress = function(event) {
-    switch (event.keyCode) {
-        case 13:
-            generator(n)
-            break
-        case "a":
-            generator(n)
-            break
-        default:
-            alert("This key is not supported, please use a, d, left arrow or right arrow.")
-            break
-    }
-} */
+const onKeyPress = function(event) {
+    let enterKey = event.keyCode
 
+    if (enterKey === 13) {
+        const n = Number(input.value)
+        generator(n)
+    } 
+    
+    console.log(enterKey)
+}
 
-document.addEventListener('click', onClick)
-/* btn.addEventListener('keydown', onKeyPress) */
+btn.addEventListener('click', onClick)
+input.addEventListener('keydown', onKeyPress)

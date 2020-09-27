@@ -7,46 +7,67 @@ let mSec = 0
 let sec = 0
 let min = 0
 
-let isStopwatchStopped = true
+let isStopwatchOn = false
 
-const stopwatch = function() {
-    mSec ++
-    console.log(mSec)
-
-    if (mSec === 100) {
-        mSec = 0
-        sec ++
-
-        console.log(sec)
+const stopwatch = setInterval(function(displayMSec, displaySec, displayMin) {
+    if (isStopwatchOn) {
+        
+    } else {
+        mSec ++
+        console.log(mSec)
+    
+        if (mSec === 100) {
+            mSec = 0
+            sec ++
+    
+            console.log(sec)
+        }
+        if (sec === 60) {
+            sec = 0
+            min ++
+    
+            console.log(min)
+        }
+    
+        if (mSec < 10) {
+            displayMSec = '0' + mSec
+        } else {
+            displayMSec = mSec
+        }
+    
+        if (sec < 10) {
+            displaySec = '0' + sec
+        } else {
+            displaySec = sec
+        }
+    
+        if (min < 10) {
+            displayMin = '0' + min
+        } else {
+            displayMin = min
+        }
+    
+        container.innerHTML = displayMin + ':' + displaySec + ':' + displayMSec
     }
-    if (sec === 60) {
-        sec = 0
-        min ++
 
-        console.log(min)
-    }
-
-    container.innerHTML = min + ':' + sec + ':' + mSec
-}
+}, 10)
 
 
 const onClickStarStop = function() {
-    if (isStopwatchStopped = true) {
-        setInterval(stopwatch, 10)
-
-        isStopwatchStopped = false
-
-        btn1.innerHTML = 'Stop'
-
-        console.log('start')
-    } else {
+    if (isStopwatchOn) {
         clearInterval(stopwatch)
 
-        isStopwatchStopped = true
-
+        isStopwatchOn = false
         btn1.innerHTML = 'Start'
 
-        console.log('stop')
+        console.log(isStopwatchOn)
+    } else {
+        stopwatch
+
+        isStopwatchOn = true
+        btn1.innerHTML = 'Stop'
+
+        console.log(isStopwatchOn)
     }
 }
 
@@ -56,12 +77,11 @@ const onClickReset = function() {
     min = 0
 
     clearInterval(stopwatch)
-
     container.innerHTML = '00:00:00'
+    btn1.innerHTML = 'Start'
 
-    console.log('reset')
+    console.log(isStopwatchOn)
 }
-
 
 
 btn1.addEventListener('click', onClickStarStop)
