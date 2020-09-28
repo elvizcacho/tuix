@@ -6,10 +6,12 @@
 
 ### Homework
 - Highlight
-- Add the option to show the wall by pressing enter ✓
-- Create a stopwatch script.
+- Create a stopwatch script (script.js).
 - Create a digital stopwatch. 
-_ 
+_ Create an analog stopwatch with css and HTML.
+
+TASK:
+
 n = 1
  *
 * *
@@ -32,4 +34,4 @@ n = 4
   *    *
   *    * 
    ****
-- Create an analog version of the stopwatch using css and js only (no canvas)
+

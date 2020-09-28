@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(50, 50, 50);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.buttons button {
+    width: 100px;
+    height: 30px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(40, 40, 40);
+
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 3px;
+
+    margin: 0 10px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 350px;
+
+    margin: 30px auto;
+
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 50%;
+
+    color: rgb(200, 200, 200);
+    background-color: rgb(40, 40, 40);
+    
+    font-family: 'Roboto Mono', monospace;
+    font-size: 70px;
+}
