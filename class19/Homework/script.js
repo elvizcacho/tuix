@@ -1,34 +1,27 @@
 
-const container = document.getElementById("container")
-const btn1 = document.getElementById("start/stop")
-const btn2 = document.getElementById("reset")
-
 let mSec = 0
 let sec = 0
 let min = 0
 
 let isStopwatchOn = false
-
+console.log(isStopwatchOn)
 const stopwatch = setInterval(function() {
     if (isStopwatchOn === true) {
-         let displayMSec = ''
-         let displaySec = ''
-         let displayMin = ''
         
         mSec ++
-        console.log(mSec)
+        //console.log(mSec)
     
         if (mSec === 100) {
             mSec = 0
             sec ++
     
-            console.log(sec)
+            //console.log(sec)
         }
         if (sec === 60) {
             sec = 0
             min ++
     
-            console.log(min)
+            //console.log(min)
         }
     
         if (mSec < 10) {
@@ -49,7 +42,7 @@ const stopwatch = setInterval(function() {
             displayMin = min
         }
     
-        container.innerHTML = displayMin + ':' + displaySec + ':' + displayMSec
+        console.log(displayMin + ':' + displaySec + ':' + displayMSec)
         
     }
 }, 10)
@@ -58,14 +51,12 @@ const stopwatch = setInterval(function() {
 const onClickStarStop = function() {
     if (isStopwatchOn === true) {
         isStopwatchOn = false
-        btn1.innerHTML = 'Start'
 
-        console.log(isStopwatchOn)
+        console.log('stop')
     } else {
         isStopwatchOn = true
-        btn1.innerHTML = 'Stop'
 
-        console.log(isStopwatchOn)
+        console.log('start')
     }
 }
 
@@ -74,11 +65,5 @@ const onClickReset = function() {
     sec = 0
     min = 0
 
-    container.innerHTML = '00:00:00'
-
     console.log(isStopwatchOn)
 }
-
-
-btn1.addEventListener('click', onClickStarStop)
-btn2.addEventListener('click', onClickReset)
