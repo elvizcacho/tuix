@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stopwatch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="buttons">
+            <button id="start/stop" value="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="container" id="container">
+            <div class="minutes">
+                <div class="min" id="min-hand"></div>
+            </div>
+            <div class="seconds">
+                <div class="sec" id="sec-hand"></div>
+            </div>
+            <div class="milliseconds">
+                <div class="millsec" id="millsec-hand"></div>
+            </div>
+            <span class="digits" id="digits">00:00:00</span>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>

@@ -1,7 +1,11 @@
 
 const container = document.getElementById("container")
+const digital = document.getElementById("digits")
 const btn1 = document.getElementById("start/stop")
 const btn2 = document.getElementById("reset")
+const minHand = document.getElementById("min-hand")
+const secHand = document.getElementById("sec-hand")
+const mSecHand = document.getElementById("millsec-hand")
 
 let mSec = 0
 let sec = 0
@@ -16,18 +20,21 @@ const stopwatch = setInterval(function() {
          let displayMin = ''
         
         mSec ++
+        mSecHand.style.transform = `rotateZ(${mSec*3.6}deg)`        
         console.log(mSec)
     
         if (mSec === 100) {
             mSec = 0
             sec ++
-    
+
+            secHand.style.transform = `rotateZ(${sec*6}deg)`    
             console.log(sec)
         }
         if (sec === 60) {
             sec = 0
             min ++
     
+            minHand.style.transform = `rotateZ(${min*6}deg)`    
             console.log(min)
         }   
     
@@ -49,7 +56,7 @@ const stopwatch = setInterval(function() {
             displayMin = min
         }
     
-        container.innerHTML = displayMin + ':' + displaySec + ':' + displayMSec
+        digital.innerHTML = displayMin + ':' + displaySec + ':' + displayMSec
         
     }
 }, 10)
@@ -74,7 +81,11 @@ const onClickReset = function() {
     sec = 0
     min = 0
 
-    container.innerHTML = '00:00:00'
+    digital.innerHTML = '00:00:00'
+
+    mSecHand.style.transform = `rotateZ(0deg)`
+    secHand.style.transform = `rotateZ(0deg)`
+    minHand.style.transform = `rotateZ(0deg)`
 
     console.log(isStopwatchOn)
 }
