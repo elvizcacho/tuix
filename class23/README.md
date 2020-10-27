@@ -1,12 +1,13 @@
 # Class 14
 
 #### Topics: 
-- Review of previous concepts
-- Math.random()
+- Event target
+- split
+- add events dynamically to newly created HTML objects. 
 
 ### Homework
 - Highlight 
-_ Create an analog stopwatch with css and HTML.
+
 
 TASK:
 
@@ -33,3 +34,4 @@ n = 4
   *    * 
    ****
 
+- Finish triqui
