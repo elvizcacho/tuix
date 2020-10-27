@@ -1,74 +1,46 @@
-const dice = document.getElementById("dice1")
-const dice2 = document.getElementById("dice2")
-const playBtn = document.getElementById("play-btn")
+const table = document.getElementById('table')
 
+// 'X' 'O'
+const matrix = [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
+]
 
-const getDots = function (n) {
-    switch (n) {
-        case 1:
-            return `<div class="dice">
-                        <div class="dot one"></div>
-                   </div>`
-        case 2:
-            return `<div class="dice">
-                        <div class="dot two-a"></div>
-                        <div class="dot two-b"></div>
-                    </div>`
-        case 3:
-            return `<div class="dice">
-                        <div class="dot three-a"></div>
-                        <div class="dot three-b"></div>
-                        <div class="dot three-c"></div>
-                    </div>`
-        case 4:
-            return `<div class="dice">
-                        <div class="dot four-a"></div>
-                        <div class="dot four-b"></div>
-                        <div class="dot four-c"></div>
-                        <div class="dot four-d"></div>
-                    </div>`
-        case 5:
-            return `<div class="dice">
-                        <div class="dot five-a"></div>
-                        <div class="dot five-b"></div>
-                        <div class="dot five-c"></div>
-                        <div class="dot five-d"></div>
-                        <div class="dot five-e"></div>
-                    </div>`
-        case 6:
-            return `<div class="dice">
-                        <div class="dot six-a"></div>
-                        <div class="dot six-b"></div>
-                        <div class="dot six-c"></div>
-                        <div class="dot six-d"></div>
-                        <div class="dot six-e"></div>
-                        <div class="dot six-f"></div>
-                    </div>`
+let init = false
+let player = 'X'
+
+const onCellClicked = function (i, j) {
+    matrix[i][j] = player
+    rederTriqui()
+    player = player === 'X' ? 'O' : 'X'
+
+}
+
+const addEventsToCells = function () {
+    const cells = document.getElementsByClassName('cell')
+    for (let x = 0; x < cells.length; x++) {
+        const cell = cells[x]
+        cell.addEventListener('click', (e) => {
+            const ij = e.target.id.split('-').slice(1)
+            onCellClicked(ij[0], ij[1])
+        })
     }
 }
 
-const generateNumber = function() {
-    return Math.ceil((Math.random() * 6))
+const rederTriqui = function () {
+    let result = ''
+    for (let i = 0; i < matrix.length; i ++) {
+        const row = matrix[i]
+        result += '<div class="row">'
+        for (let j = 0; j < row.length; j++) {
+            result += `<div class="cell" id="cell-${i}-${j}">${row[j]}</div>`
+        }
+        result += '</div>'
+    }
+    table.innerHTML = result
+
+    addEventsToCells()
 }
 
-const renderDice = function () {
-    dice.innerHTML = getDots(generateNumber())
-    dice2.innerHTML = getDots(generateNumber())
-}
-
-
-
-const throwDice = function () {
-
-    const intervalId = setInterval(function () {
-        renderDice()
-    }, 200)
-
-    setTimeout(function () {
-        clearInterval(intervalId)
-    }, 2000)
-}
-
-playBtn.addEventListener('click', throwDice)
-
-throwDice()
+rederTriqui()
