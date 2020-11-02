@@ -1,11 +1,10 @@
-# Class 14
+# Class 24
 
 #### Topics: 
-- Event target
-- split
-- add events dynamically to newly created HTML objects. 
+- Other programing languages
+- continue and break 
 
 ### Homework
 - Highlight 
 - Finish triqui
-- Write the same exercise of class 19 in Ruby, Python, PHP, Go and Java 
+- Write the same exercise of class 19 in Ruby, Python, PHP, Go and Java + (Typescript)
