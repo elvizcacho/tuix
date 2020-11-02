@@ -2,66 +2,48 @@
 console.log('———Intit Exercise O ———')
 
 const n = 4
+const j = n + 1
 
-
-for (let i = 1; i <= (n / n); i++) {
-
+const drawSymbol = function (n, symbol) {
     let row = ''
 
-    for (let j = 1; j <= (n / n); j++) {
-        row += ' '
-    }
-
     for (let h = 1; h <= n; h++) {
-        row += '*'
+        row += symbol
     }
 
-    for (let k = 1; k <= (n / n); k++) {
-
-        row += ' '
-    }
-
-console.log(row);
+    return row
 }
 
-for (let i = 1; i <= n; i++) {
-
+const drawEdge = function () {
     let row = ''
-
-    for (let j = 1; j <= (n / n); j++) {
-        row += '*'
-    }
-
-    for (let h = 1; h <= n; h++) {
-        row += ' '
-    }
-
-    for (let k = 1; k <= (n / n); k++) {
-
-        row += '*'
-    }
-
-console.log(row);
+    row += drawSymbol(1, ' ')
+    row += drawSymbol(n - 1, '*')
+    row += drawSymbol(1, ' ')
+    return row
 }
 
-for (let i = 1; i <= (n / n); i++) {
+let result = ''
+const saveToResult = function (row) {
+    result += row + '\n'
+}
 
+
+for (let i = 1; i <= j; i++) {
     let row = ''
-
-    for (let j = 1; j <= (n / n); j++) {
-        row += ' '
+    // first line
+    if (i === 1 || i === j) {
+        row += drawEdge()
+        saveToResult(row)
+        continue
     }
 
-    for (let h = 1; h <= n; h++) {
-        row += '*'
-    }
+    row += drawSymbol(1, '*')
+    row += drawSymbol(n - 1, ' ')
+    row += drawSymbol(1, '*')
+    saveToResult(row)
 
-    for (let k = 1; k <= (n / n); k++) {
-
-        row += ' '
-    }
-
-console.log(row);
 }
+
+console.log(result.substr(0, result.length - 1))
 
 console.log('———End———')
