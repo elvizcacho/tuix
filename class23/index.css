@@ -5,3 +5,17 @@
 .cell {
     padding: 20px;
 }
+
+.winner {
+    position: relative;
+}
+
+.winner .vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

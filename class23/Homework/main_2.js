@@ -21,5 +21,5 @@ for (let i = 1; i <= N; i++) {
         }
     }
 
-console.log(row);
+    console.log(row);
 }
