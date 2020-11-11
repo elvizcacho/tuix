@@ -2,29 +2,29 @@ package main
 import "fmt"
 
 func main() {
-    const n = 4
+    var n = 4
 
-    const isACorner = func (i, j, n ) {
+    var isACorner = func (i int, j int, n int) bool{
         return (j == 1 || j == n) && (i == 1 || i == n)
     }
 
-    const isInside = func (i, j, n) {
+    var isInside = func (i int, j int, n int) bool{
         return (j > 1 && j < n) && (i > 1 && i < n)
     }
 
     func () {
         for i := 1; i <= n; i++ {
 
-            var row = ''
+            var row = ""
         
             for j := 1; j <= n; j++ {
                 if isACorner(n, i, j) {
                 row += ' '
                 } else {
                     if isInside(i, j, n) {
-                        row += ' '
+                        row += " "
                     } else {
-                        row += '*'
+                        row += "*"
                     }
                 }
             }
