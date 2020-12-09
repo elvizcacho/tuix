@@ -19,11 +19,11 @@ const checkRows = function (playerSymbol) {
     // check for rows
     for (let i = 0; i < matrix.length; i ++) {
         let counter = 0;
-        for (let j = 0; j < matrix[i].length; j ++) {
+        for (let j = 0; j < matrix[i].length; j ++) { 
             if (matrix[i][j] === playerSymbol) {
                 winnerCells[counter] = [i, j]
                 counter ++
-            }
+            } 
         }
         if (counter === matrix[i].length) {
             return {
@@ -146,16 +146,19 @@ const rederTriqui = function () {
             if (isAWinner) {
                 if (isCellPartOfWinnerCells(i, j, winnerCells)) {
                     result += `<div class="cell winner" id="cell-${i}-${j}">
-                        ${row[j]}
-                        <div class="vertical-line"></div>
-                    </div>`
+                                ${row[j]}
+                                <div class="vertical-line"></div>
+                               </div>`
                 } else {
-                    result += `<div class="cell" id="cell-${i}-${j}">${row[j]}</div>`
+                    result += `<div class="cell" id="cell-${i}-${j}">
+                                ${row[j]}
+                               </div>`
                 }
             } else {
-                result += `<div class="cell" id="cell-${i}-${j}">${row[j]}</div>`
+                result += `<div class="cell" id="cell-${i}-${j}">
+                            ${row[j]}
+                           </div>`
             }
-
         }
         result += '</div>'
     }
