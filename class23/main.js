@@ -16,8 +16,33 @@ const getWinnerCells = function () {
 
 const checkRows = function (playerSymbol) {
     const winnerCells = [[null, null], [null, null], [null, null]]
+    const row1 = matrix[0][0] === playerSymbol && matrix[0][1] === playerSymbol && matrix[0][2] === playerSymbol
+    const row2 = matrix[1][0] === playerSymbol && matrix[1][1] === playerSymbol && matrix[1][2] === playerSymbol
+    const row3 = matrix[2][0] === playerSymbol && matrix[2][1] === playerSymbol && matrix[2][2] === playerSymbol
+
+    if (row1) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[0,0],[0,1],[0,2]]
+        }
+    }
+
+    if (row2) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[1,0],[1,1],[1,2]]
+        }
+    }
+
+    if (row3) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[2,0],[2,1],[2,2]]
+        }
+    }
+
     // check for rows
-    for (let i = 0; i < matrix.length; i ++) {
+    /* for (let i = 0; i < matrix.length; i ++) {
         let counter = 0;
         for (let j = 0; j < matrix[i].length; j ++) { 
             if (matrix[i][j] === playerSymbol) {
@@ -31,7 +56,7 @@ const checkRows = function (playerSymbol) {
                 winnerCells: winnerCells
             }
         }
-    }
+    }*/
 
     return {
         isThereAWinner: false,
@@ -41,9 +66,33 @@ const checkRows = function (playerSymbol) {
 
 const checkColumns = function (playerSymbol) {
     const winnerCells = [[null, null], [null, null], [null, null]]
+    const column1 = matrix[0][0] === playerSymbol && matrix[1][0] === playerSymbol && matrix[2][0] === playerSymbol
+    const column2 = matrix[0][1] === playerSymbol && matrix[1][1] === playerSymbol && matrix[2][1] === playerSymbol
+    const column3 = matrix[0][2] === playerSymbol && matrix[1][2] === playerSymbol && matrix[2][2] === playerSymbol
+
+    if (column1) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[0,0],[1,0],[2,0]]
+        }
+    }
+
+    if (column2) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[0,1],[1,1],[2,1]]
+        }
+    }
+
+    if (column3) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[0,2],[1,2],[2,2]]
+        }
+    }
 
     // check for columns
-    let i = 0
+    /* let i = 0
     for (let j = 0; j < matrix[i].length; j ++) {
         let counter = 0;
         for (i = 0; i < matrix.length; i ++) {
@@ -59,7 +108,33 @@ const checkColumns = function (playerSymbol) {
                 winnerCells: winnerCells
             }
         }
+    } */
+
+    return {
+        isThereAWinner: false,
+        winnerCells: winnerCells
     }
+}
+
+const checkDiagonals = function (playerSymbol) {
+    const winnerCells = [[null, null], [null, null], [null, null]]
+    const diagonal1 = matrix[0][0] === playerSymbol && matrix[1][1] === playerSymbol && matrix[2][2] === playerSymbol
+    const diagonal2 = matrix[2][0] === playerSymbol && matrix[1][1] === playerSymbol && matrix[0][2] === playerSymbol
+
+    if (diagonal1) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[0,0],[1,1],[2,2]]
+        }
+    }
+
+    if (diagonal2) {
+        return {
+            isThereAWinner: true,
+            winnerCells: [[2,0],[1,1],[0,2]]
+        }
+    }
+
 
     return {
         isThereAWinner: false,
@@ -77,6 +152,7 @@ const checkWinnerOnRows = function () {
         return checkedORows
     }
 
+
     return checkedORows
 }
 
@@ -90,19 +166,43 @@ const checkWinnerOnColumns = function () {
         return checkedOColumns
     }
 
+
     return checkedOColumns
+}
+
+const checkWinnerOnDiagonals = function () {
+    const checkedXDiagonals = checkDiagonals('X')
+    if (checkedXDiagonals.isThereAWinner) {
+        return checkedXDiagonals
+    }
+    const checkedODiagonals = checkDiagonals('O')
+    if (checkedODiagonals.isThereAWinner) {
+        return checkedODiagonals
+    }
+
+
+    return checkedODiagonals
 }
 
 const isThereAWinner = function () {
     // check rows
     const checkedRows = checkWinnerOnRows()
     if (checkedRows.isThereAWinner) {
-        return checkedRows
+        return {
+            isThereAWinner: checkedRows.isThereAWinner,
+            winnerCells: checkedRows.winnerCells,
+        }
     }
     //check columns
     const checkedColumns = checkWinnerOnColumns()
     if (checkedColumns.isThereAWinner) {
         return checkedColumns
+    }
+
+    //check diagonals
+    const checkedDiagonals = checkWinnerOnDiagonals()
+    if (checkedDiagonals.isThereAWinner) {
+        return checkedDiagonals
     }
 
     return checkedRows
